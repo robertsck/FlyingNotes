@@ -1,0 +1,976 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2017-05-03 Wed 20:58 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Flying</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Chris Roberts" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="~/git/org-html-themes/styles/bigblow/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="~/git/org-html-themes/styles/bigblow/css/bigblow.css"/>
+<link rel="stylesheet" type="text/css" href="~/git/org-html-themes/styles/bigblow/css/hideshow.css"/>
+<script type="text/javascript" src="~/git/org-html-themes/styles/bigblow/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="~/git/org-html-themes/styles/bigblow/js/jquery-ui-1.10.2.min.js"></script>
+<script type="text/javascript" src="~/git/org-html-themes/styles/bigblow/js/jquery.localscroll-min.js"></script>
+<script type="text/javascript" src="~/git/org-html-themes/styles/bigblow/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+<script type="text/javascript" src="~/git/org-html-themes/styles/bigblow/js/jquery.zclip.min.js"></script>
+<script type="text/javascript" src="~/git/org-html-themes/styles/bigblow/js/bigblow.js"></script>
+<script type="text/javascript" src="~/git/org-html-themes/styles/bigblow/js/hideshow.js"></script>
+<script type="text/javascript" src="~/git/org-html-themes/styles/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Flying</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgd8e67f5">1. Scenario Based Training</a>
+<ul>
+<li><a href="#org47c1995">1.1. Configurations</a>
+<ul>
+<li><a href="#orgbe76805">1.1.1. Initial Climb after Takeoff</a></li>
+<li><a href="#org85e057d">1.1.2. En Route Climb</a></li>
+<li><a href="#org2643e4f">1.1.3. Normal Cruise</a></li>
+<li><a href="#org0bfe1cf">1.1.4. Low-Speed Cruise / Initial Approach Speed</a></li>
+<li><a href="#org2160f52">1.1.5. En Route Descent</a></li>
+<li><a href="#org8d7604f">1.1.6. Traffic Pattern</a></li>
+<li><a href="#org142d712">1.1.7. Final Approach</a></li>
+<li><a href="#orgf98e0de">1.1.8. ILS Approach (Flaps 10')</a></li>
+<li><a href="#org2b92b32">1.1.9. ILS Approach (Flaps 0')</a></li>
+</ul>
+</li>
+<li><a href="#org648f00f">1.2. Sequence to set Airplane State</a></li>
+<li><a href="#org99a8120">1.3. Private Pilot - Ground</a>
+<ul>
+<li><a href="#orgc8a18e0">1.3.1. Part I - Fundamentals of Flight</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgd8e67f5" class="outline-2">
+<h2 id="orgd8e67f5"><span class="section-number-2">1</span> Scenario Based Training</h2>
+<div class="outline-text-2" id="text-1">
+</div><div id="outline-container-org47c1995" class="outline-3">
+<h3 id="org47c1995"><span class="section-number-3">1.1</span> Configurations</h3>
+<div class="outline-text-3" id="text-1-1">
+</div><div id="outline-container-orgbe76805" class="outline-4">
+<h4 id="orgbe76805"><span class="section-number-4">1.1.1</span> Initial Climb after Takeoff</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<dl class="org-dl">
+<dt>Pitch</dt><dd>+5</dd>
+<dt>Power</dt><dd>Max</dd>
+<dt>Flaps</dt><dd>0</dd>
+<dt>Airspeed</dt><dd>80 KIAS</dd>
+<dt>Rate of Climb</dt><dd>+800-900 fpm</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-org85e057d" class="outline-4">
+<h4 id="org85e057d"><span class="section-number-4">1.1.2</span> En Route Climb</h4>
+<div class="outline-text-4" id="text-1-1-2">
+<dl class="org-dl">
+<dt>Pitch</dt><dd>+2</dd>
+<dt>Power</dt><dd>Max</dd>
+<dt>Flaps</dt><dd>0</dd>
+<dt>Airspeed</dt><dd>90 KIAS</dd>
+<dt>Rate of Climb</dt><dd>+600-700 fpm</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-org2643e4f" class="outline-4">
+<h4 id="org2643e4f"><span class="section-number-4">1.1.3</span> Normal Cruise</h4>
+<div class="outline-text-4" id="text-1-1-3">
+<dl class="org-dl">
+<dt>Pitch</dt><dd>+0</dd>
+<dt>Power</dt><dd>2500 rpm</dd>
+<dt>Flaps</dt><dd>0</dd>
+<dt>Airspeed</dt><dd>110-115 KIAS</dd>
+<dt>Rate of Climb</dt><dd>0 fpm</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-org0bfe1cf" class="outline-4">
+<h4 id="org0bfe1cf"><span class="section-number-4">1.1.4</span> Low-Speed Cruise / Initial Approach Speed</h4>
+<div class="outline-text-4" id="text-1-1-4">
+<dl class="org-dl">
+<dt>Pitch</dt><dd>+0</dd>
+<dt>Power</dt><dd>2100 rpm</dd>
+<dt>Flaps</dt><dd>0</dd>
+<dt>Airspeed</dt><dd>90 KIAS</dd>
+<dt>Rate of Climb</dt><dd>0 fpm</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-org2160f52" class="outline-4">
+<h4 id="org2160f52"><span class="section-number-4">1.1.5</span> En Route Descent</h4>
+<div class="outline-text-4" id="text-1-1-5">
+<dl class="org-dl">
+<dt>Pitch</dt><dd>-1</dd>
+<dt>Power</dt><dd>2300 rpm</dd>
+<dt>Flaps</dt><dd>0</dd>
+<dt>Airspeed</dt><dd>105-110 KIAS</dd>
+<dt>Rate of Climb</dt><dd>-500 fpm</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-org8d7604f" class="outline-4">
+<h4 id="org8d7604f"><span class="section-number-4">1.1.6</span> Traffic Pattern</h4>
+<div class="outline-text-4" id="text-1-1-6">
+<dl class="org-dl">
+<dt>Pitch</dt><dd>+0</dd>
+<dt>Power</dt><dd>2000 rpm</dd>
+<dt>Flaps</dt><dd>10</dd>
+<dt>Airspeed</dt><dd>85-90 KIAS</dd>
+<dt>Rate of Climb</dt><dd>0 fpm</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-org142d712" class="outline-4">
+<h4 id="org142d712"><span class="section-number-4">1.1.7</span> Final Approach</h4>
+<div class="outline-text-4" id="text-1-1-7">
+<dl class="org-dl">
+<dt>Pitch</dt><dd>-2</dd>
+<dt>Power</dt><dd>1600 rpm</dd>
+<dt>Flaps</dt><dd>30</dd>
+<dt>Airspeed</dt><dd>65 KIAS</dd>
+<dt>Rate of Climb</dt><dd>300-500 fpm</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-orgf98e0de" class="outline-4">
+<h4 id="orgf98e0de"><span class="section-number-4">1.1.8</span> ILS Approach (Flaps 10')</h4>
+<div class="outline-text-4" id="text-1-1-8">
+<dl class="org-dl">
+<dt>Pitch</dt><dd>-1</dd>
+<dt>Power</dt><dd>1900 rpm</dd>
+<dt>Flaps</dt><dd>10</dd>
+<dt>Airspeed</dt><dd>90 KIAS</dd>
+<dt>Rate of Climb</dt><dd>-500 fpm</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-org2b92b32" class="outline-4">
+<h4 id="org2b92b32"><span class="section-number-4">1.1.9</span> ILS Approach (Flaps 0')</h4>
+<div class="outline-text-4" id="text-1-1-9">
+<dl class="org-dl">
+<dt>Pitch</dt><dd>-1</dd>
+<dt>Power</dt><dd>2000-2100 rpm</dd>
+<dt>Flaps</dt><dd>0</dd>
+<dt>Airspeed</dt><dd>100-105 KIAS</dd>
+<dt>Rate of Climb</dt><dd>-500 fpm</dd>
+</dl>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org648f00f" class="outline-3">
+<h3 id="org648f00f"><span class="section-number-3">1.2</span> Sequence to set Airplane State</h3>
+<div class="outline-text-3" id="text-1-2">
+<ul class="org-ul">
+<li>Pitch - establish appropriate pitch</li>
+<li>Power - adjust throttle</li>
+<li>Configuration - set/confirm gear/flaps</li>
+<li>Stabilize - allow plane to stabilize</li>
+<li>Trim - Trim to relieve pressure</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org99a8120" class="outline-3">
+<h3 id="org99a8120"><span class="section-number-3">1.3</span> Private Pilot - Ground</h3>
+<div class="outline-text-3" id="text-1-3">
+</div><div id="outline-container-orgc8a18e0" class="outline-4">
+<h4 id="orgc8a18e0"><span class="section-number-4">1.3.1</span> Part I - Fundamentals of Flight</h4>
+<div class="outline-text-4" id="text-1-3-1">
+</div><ol class="org-ol"><li><a id="orgcf91551"></a>Chapter 1 - Discovering Aviation<br /><ol class="org-ol"><li><a id="orgb037124"></a>Pilot Training<br /><ol class="org-ol"><li><a id="org5769118"></a>FAA<br /><div class="outline-text-7" id="text-1-3-1-1-1-1">
+<ul class="org-ul">
+<li>governs commercial and general aviation</li>
+<li>Fixed Base Operators (FBOs) - training schools</li>
+<li>Para 141 and Part 61 schools.</li>
+</ul>
+</div></li>
+
+<li><a id="orgdc579a6"></a><a id="v94dc820wkh0"></a><span class="todo TODO">TODO</span> Category / Class / Type of Aircraft<br /><div class="outline-text-7" id="text-1-3-1-1-1-2">
+<dl class="org-dl">
+<dt>Category :: aircraft</dt><dd>intended use of an aircraft</dd>
+<dt>Class :: Airmen</dt><dd>a classification of aircraft within a category having similar operating characteristics. Single engine, multi-engine, land, water, etc.</dd>
+<dt>Class :: Aircraft</dt><dd>broad grouping of aircraft having similar characteristics of propulsion, flight, or landing such as airplane, rotorcraft, glider, ballon, landplane, seaplane</dd>
+<dt>(no term)</dt><dd>::</dd>
+</dl>
+</div></li>
+
+<li><a id="orgd33d037"></a>Inspection / Maintenance Requirements<br /><div class="outline-text-7" id="text-1-3-1-1-1-3">
+<ul class="org-ul">
+<li>Annual inspection every 12 calendar months. So, if inspection performed on November 1, next inspection is due November 30 of following year.</li>
+<li>Rental aircraft must have 100-hour inspections documented. Transponder inspected every 24 calendar months.</li>
+<li>Can fly passed 100-hour point to a place where inspection can be completed. Next inspection is due 100 hours from the original expiration time.</li>
+<li>If an aircraft is altered in a way that can appreciably change its flight characteristics, it must be flight tested by a person who is rated in that aircraft and who holds at least a private pilot certificate.</li>
+<li>Maintenance - normally must be performed by a FAA-certified aviation mechanic</li>
+<li>Preventative maintenance - can be performed by a private pilot. Must be entered in the aircraft maintenance records. Including the signature, certificate number, and kind of certificate held by the person approving the work and a description of the work performed.</li>
+</ul>
+</div></li>
+
+<li><a id="orge881a7d"></a>Private Pilot Certificate<br /><div class="outline-text-7" id="text-1-3-1-1-1-4">
+<ul class="org-ul">
+<li>For student pilot: Must be 16, read, speak and understand English</li>
+<li>Third-class medical certificate (First-class is for airline transport pilots, second-class for commercial pilot, third-class for student, recreational and private)</li>
+<li>For private pilot: at least 17, knowledge test, practical test, training requirements</li>
+<li>Does not expire</li>
+<li>Flight review every 24 calendar months. One hour of ground instruction and one hour of flight instruction.</li>
+<li>To carry passengers, complete three takeoffs and landings in the same category and class of aircraft within the preceding 90 days.</li>
+<li>To carry passengers at night, those takeoffs and landings must be to a full stop and between one hour after sunset and one hour before sunrise.</li>
+<li></li>
+</ul>
+</div></li></ol></li>
+
+<li><a id="org84e0d0f"></a>Aviation Opportunities<br /><div class="outline-text-6" id="text-1-3-1-1-2">
+<dl class="org-dl">
+<dt>Plane Parachute</dt><dd>must have been packed by a certificated and appropriately rated parachute rigger. Within preceding 90 days is natural materials, 180 days if synthetic materials.</dd>
+<dt>(no term)</dt><dd>Clubs:
+<ul class="org-ul">
+<li>AOPA</li>
+<li>Experimental Aircraft Association (EAA)</li>
+<li>Civil Air Patrol (CAP) - 90 percent of search and rescue missions</li>
+</ul></dd>
+<dt>High performance airplane</dt><dd>more than 200 horsepower</dd>
+<dt>Complex airplane</dt><dd>retractable landing gear, flaps, controllable-pitch propeller.</dd>
+<dt>(no term)</dt><dd>Full authority digital engine control (FADEC) - considered to have a controllable propeller</dd>
+<dt>(no term)</dt><dd>Ratings:
+<dl class="org-dl">
+<dt>Instrument rating</dt><dd>May operate under IFR conditions. 40 hours of instrument time. Knowledge test, practical test.</dd>
+<dt>Class Ratings</dt><dd>Multi-engine, seaplane.</dd>
+<dt>Multi-engine</dt><dd>Practical test.</dd>
+<dt>Seaplane</dt><dd>Practical test.</dd>
+<dt>Commercial</dt><dd>190-250 hours of flight time is required. Minimum of 100 hours PIC, 50 hours cross-country. 10 hours in complex plane. Knowledge test, practical test.</dd>
+<dt>CFI</dt><dd>two knowledge exams and a practical test</dd>
+<dt>ATP</dt><dd>23 yo, 1,500 hours of flight time, 250 hours PIC, 500 cross-country, 100 night flight, 75 horus instrument. Knowledge test. Practical test.</dd>
+</dl></dd>
+</dl>
+</div></li>
+<li><a id="org0e05344"></a>Human Factors<br /><div class="outline-text-6" id="text-1-3-1-1-3">
+<dl class="org-dl">
+<dt>Single-Pilot Resource Management (SRM)</dt><dd>art and science of managing all available resources prior and during flight</dd>
+<dt>Aviation physiology </dt><dd>study of the performance and limitations of the body in the flight environment</dd>
+</dl>
+</div>
+<ol class="org-ol"><li><a id="orgb1aae89"></a>SRM<br /><div class="outline-text-7" id="text-1-3-1-1-3-1">
+<ul class="org-ul">
+<li>Six concepts:
+<ul class="org-ul">
+<li>Aeronautical decision making</li>
+<li>Risk management</li>
+<li>Task management</li>
+<li>Situational Awareness</li>
+<li>Controlled flight into terrain awareness</li>
+<li>Automation management</li>
+</ul></li>
+</ul>
+</div>
+<ol class="org-ol"><li><a id="org73b7b4a"></a>Aeronautical Decision Making<br /><div class="outline-text-8" id="text-1-3-1-1-3-1-1">
+<dl class="org-dl">
+<dt>ADM</dt><dd>systematic approach to the mental process to consistently determine the best course of action</dd>
+<dt>(no term)</dt><dd>ADM Process:
+<ul class="org-ul">
+<li>Recognize a change.</li>
+<li>Define the problem.</li>
+<li>Choose a course of action. Consider possibilities and risk of each.</li>
+<li>Implement your decision.</li>
+<li>Evaluate the outcome.</li>
+</ul></dd>
+<dt>(no term)</dt><dd>There are a variety of mnemonics to remember the steps: FORDEC, NMATE, DODAR, SAFE, DECIDE</dd>
+<dt>(no term)</dt><dd>FAA's DECIDE model:
+<ul class="org-ul">
+<li>Detect the fact that a change has occurred</li>
+<li>Estimate the need to counter or react to the change</li>
+<li>Choose a desirable outcome for the success of the flight</li>
+<li>Identify actions which could successfully control the change</li>
+<li>Do the necessary action to adapt to the change</li>
+<li>Evaluate the effect of the action</li>
+</ul></dd>
+<dt>(no term)</dt><dd>Self-Assessment
+<ul class="org-ul">
+<li>Check self: helath, stress, fatigue, attitude, knowledge, skill level, recency of experience</li>
+<li>Establish personal limitations</li>
+<li>Create a checklist (such as I'm SAFE)</li>
+</ul></dd>
+<dt>(no term)</dt><dd>I'm Safe Checklist:
+<ul class="org-ul">
+<li>Illness - Do I have symptoms?</li>
+<li>Medication</li>
+<li>Stress</li>
+<li>Alcohol</li>
+<li>Fatigue</li>
+<li>Eating</li>
+<li>Emotion</li>
+</ul></dd>
+<dt>(no term)</dt><dd>Hazardous attitudes
+<ul class="org-ul">
+<li>Anti-authority. "Don't tell me" Antidote: Follow the rules, they are usually right.</li>
+<li>Impulsivity. "Do it quickly" Antidote: Not so fast, think first.</li>
+<li>Invulnerability. "It won't happen to me." Antidote: It could happen to me.</li>
+<li>Macho. "I can do it." Antidote: Taking chances is foolish.</li>
+<li>Resignation. "What's the use?" Antidote: I'm not helpless, I can make a difference.</li>
+</ul></dd>
+<dt>(no term)</dt><dd>Self-critiques
+<ul class="org-ul">
+<li>Perform self-critiques after each flight to evaluate performance, determine skills to improve, create a plan.</li>
+</ul></dd>
+</dl>
+</div></li>
+<li><a id="org95f9289"></a>Risk Management<br /><div class="outline-text-8" id="text-1-3-1-1-3-1-2">
+<ul class="org-ul">
+<li>PAVE:
+<ul class="org-ul">
+<li>Pilot - Evaluate your training, experience and fitness</li>
+<li>Aircraft - Determine airworthiness, performance, proper configuration. Avionics airworthiness.</li>
+<li>EnVironment - Airport conditions, terrain, airspace, weather</li>
+<li>External Pressures - How critical is it to maintain schedule</li>
+</ul></li>
+<li>5 Ps:
+<ul class="org-ul">
+<li>Pilot - Training, experience, fitness</li>
+<li>Passengers - Passenger's experience, flexibility and fitness</li>
+<li>Plane - Airworthiness, performance, proper configuration</li>
+<li>Programming - avionics airworthiness, operation, configuration</li>
+<li>Plan - airport conditions, terrain, airspace, weather. Mission, purpose of flight, criticalness to maintain schedule.</li>
+</ul></li>
+<li>5Ps should be re-evaluated throughout flight
+<ul class="org-ul">
+<li>Before Takeoff</li>
+<li>Climb and Initial Cruise</li>
+<li>Enroute Cruise</li>
+<li>Descent</li>
+<li>Before Approach and Landing</li>
+</ul></li>
+</ul>
+</div></li>
+<li><a id="org081f658"></a>Task Management<br /><div class="outline-text-8" id="text-1-3-1-1-3-1-3">
+<ul class="org-ul">
+<li>Planning and prioritizing - learn what can be done ahead of time and what must be done in the moment</li>
+<li>Resource use - learn to recognize all resources available</li>
+<li>Checklists - 
+<ul class="org-ul">
+<li>Do list - perform items in sequence</li>
+<li>Flow pattern - guide through cockpit in a logical order, then refer to checklist</li>
+<li>Emergency - perform from memory before referring to checklist</li>
+</ul></li>
+</ul>
+</div></li>
+<li><a id="org4db1216"></a>Situational Awareness<br /><div class="outline-text-8" id="text-1-3-1-1-3-1-4">
+<ul class="org-ul">
+<li>Accurate perception of all the operational and environmental factors that affect flight safety before, during and after the flight</li>
+<li>Maintaining a solid mental picture of the condition of the pilot, passengers, plane, programming and plane</li>
+<li>Briefings - tool to prepare for critical phases of flight. Passenger briefing, takeoff briefing, before-landing briefing</li>
+<li>Passenger briefing - SAFETY
+<ul class="org-ul">
+<li>Safety belts - how to use, when to use (taxi, takeoff, landing)</li>
+<li>Air Vents - location &amp; operation</li>
+<li>Fire Extinguisher - location, operation</li>
+<li>Egress and Emergency - Operations of doors, windows, survival kit, use of onboard emergency equipment</li>
+<li>Traffic and Talking - Pointing out traffic, use of headsets, unnecessary conversation during critical phases of flight</li>
+<li>Your Questions - Solicit questions from passengers</li>
+</ul></li>
+<li>Take-off Briefing 
+<ul class="org-ul">
+<li>Wind direction, velocity</li>
+<li>Runway length</li>
+<li>Takeoff distance</li>
+<li>Initial heading</li>
+<li>Initial altitude</li>
+<li>Takeoff and climb speeds</li>
+<li>Departure procedures</li>
+<li>Emergency plan in case of engine failure</li>
+</ul></li>
+<li>Before-landing briefing
+<ul class="org-ul">
+<li>Airport information and weather conditions</li>
+<li>Active runway</li>
+<li>Terrain and obstacles</li>
+<li>Airport elevation and pattern altitude</li>
+<li>Traffic pattern entry</li>
+</ul></li>
+<li>Obstacles to situational awareness
+<ul class="org-ul">
+<li>Fixating on one aspect of flight. Distraction.</li>
+<li>Complacency - automation can create complacency</li>
+</ul></li>
+</ul>
+</div></li>
+<li><a id="orgf22938e"></a>Controlled Flight into Terrain Awareness<br /><div class="outline-text-8" id="text-1-3-1-1-3-1-5">
+<dl class="org-dl">
+<dt>CFIT</dt><dd>occurs when an aircraft is flow into terrain or water with no prior awareness on the part of the crew that the crash is imminent.</dd>
+<dt>(no term)</dt><dd>Strategies to prevent:
+<ul class="org-ul">
+<li>Plan your flight to avoid terrain and obstacles</li>
+<li>Use current charts and procedures</li>
+<li>Monitor terrain awareness and navigation displays</li>
+<li>Determine your airplane's performance</li>
+</ul></dd>
+</dl>
+</div></li>
+<li><a id="orga244b41"></a>Automation Management<br /><div class="outline-text-8" id="text-1-3-1-1-3-1-6">
+<ul class="org-ul">
+<li>Use to manage workload</li>
+<li>Monitor current mode, anticipate next mode, and verify</li>
+<li>Can lead to complacency and loss of situational awareness</li>
+<li>Three equipment operating levels:
+<ul class="org-ul">
+<li>Level 1: Manual</li>
+<li>Level 2: Use autopilot to help manage workload, but manually control plane at times. Use avionics to enhance situational awareness.</li>
+<li>Level 3: Control primarily with autopilot, use navigation and flight planning tools.</li>
+</ul></li>
+</ul>
+</div></li></ol></li>
+<li><a id="org5cfcf4b"></a>Aviation Physiology<br /><div class="outline-text-7" id="text-1-3-1-1-3-2">
+<ul class="org-ul">
+<li>Pressure effects
+<ul class="org-ul">
+<li>Ear and sinus block</li>
+<li>Toothache</li>
+<li>Gastrointestinal</li>
+<li>Scuba diving - 12 hours before ascending to 8,000 MSL for nondecompression stop diving, 24 hours for a decompression stop dive</li>
+<li>Motion sickness</li>
+<li>Stress</li>
+<li>Fatigue</li>
+<li>Noise</li>
+<li>Alcohol, drugs and performance: FARs require less than .04 pecent and 8 hours bottle to throttle. Best to allow 12 hours bottle to throttle. Commercial airlines require 24.</li>
+<li>Stimulants - can produce anxiety and mood swings</li>
+<li></li>
+</ul></li>
+</ul>
+</div></li></ol></li></ol></li>
+<li><a id="org1dd5890"></a>Chapter 2 - Airplane Systems<br /><ol class="org-ol"><li><a id="org89134c0"></a>Section A -<br /><div class="outline-text-6" id="text-1-3-1-2-1">
+<ul class="org-ul">
+<li>Pilot Operating Handbook (POH) - pertinent information about a particular make and model</li>
+<li>FAA approved airplane flight manual (AFM) - required after March 1, 1979. In most cases the POH is also the designated ARM.</li>
+<li>Pilot's information manual (PIM) - Same as POH/AFM except for precise weight and balance data and optional equipment specific to a particular airplane</li>
+<li>Aircraft operating limitations may be found in the approved flight manual, markings, placards, or a combination of these.</li>
+<li>An experimental or light-sport aircraft's operating limitations are part of Form 8130-7, which is the special airworthiness certificate. This must be carried in the aircraft.</li>
+</ul>
+</div></li>
+<li><a id="orgb85e14e"></a>Section B - Powerplant<br /><div class="outline-text-6" id="text-1-3-1-2-2">
+<ul class="org-ul">
+<li>Reciprocating Engines
+<ul class="org-ul">
+<li>Radial - three blades</li>
+<li>Horizontally opposed - two</li>
+</ul></li>
+<li>Turbine Engines
+<ul class="org-ul">
+<li>Turboprop</li>
+<li>Turbojet</li>
+</ul></li>
+<li>Reciprocating
+<ul class="org-ul">
+<li>4 Stroke Cycle:
+<ul class="org-ul">
+<li>Intake of fuel/air</li>
+<li>Compression</li>
+<li>Ignition and expansion of the gases</li>
+<li>Venting of the burned gases</li>
+</ul></li>
+</ul></li>
+<li>Effectively the same cycles in a turbojet but simultaneous</li>
+<li>Intake - usually through filter, must have alternate in case filter is clogged</li>
+<li>Carburetor - where fuel is mixed with the air
+<ul class="org-ul">
+<li>Operating principle of float-type carburetor is based on the difference in pressure at the venturi throat and the air inlet</li>
+<li>When you lean the mixture, you decrease the fuel flow to compensate for decreased air density. Leaning the mixture can eliminate engine roughness during runup at high-elevation airports.</li>
+<li>At high altitudes, mixture can be too rich, lowering temperature in cylinder, not allowing complete combustion, leaving carbon buildup, causing roughness. Most prevalent at high-elevation airports, during climbs or cruise flight at high altitude.</li>
+<li>During descent, must enrich. Overly lean can result in high engine temperatures.</li>
+<li>Best way to maintain proper mixture - monitor engine temperature.</li>
+<li>One disadvantage of a float-type carburetor is its icing tendency. Typically below 70'F and Relative humidity above 80%. Can occur up to 100'F and as low as 50% humidity. 
+<ul class="org-ul">
+<li>! decrease in RPM, roughness, possible stoppage</li>
+<li>For constant-speed propeller - decrease in manifold pressure instead of RPM</li>
+<li>Most common during reduced power - such as descents</li>
+<li>Carburetor heat - heats air before entering carburetor - causes slight decrease in power. Slight decrease in RPM, followed by gradual increase as ice melts. For constant speed prop - power changes shown in manifold pressure.</li>
+<li>First indication - lost of RPM, will increase as ice melts</li>
+<li>Should use full carb heat whenever you reduce engine RPM below normal operating range, or suspect ice</li>
+</ul></li>
+<li>Fuel injection - replaces carburetor. No ice, fuel metering more precise, distribution of fuel/air mixture is more consistent. So higher engine efficiency, lower fuel consumption, increased horsepower, lower operating temperature, longer engine life. Disadvantages: increased sensitivity to fuel contaminants, more complex starting procedures. 
+<ul class="org-ul">
+<li>Supercharge - Higher altitudes reduce engine power due to lower air density. Supercharging compresses incoming air using a pump.</li>
+<li>Turbocharge - Pressurizes air using mechanism driven by exhaust gases. More efficient.</li>
+</ul></li>
+<li>Ignition System
+<ul class="org-ul">
+<li>Magneto - suppies electrical current to the spark plug. Operates whenever the crankshaft is rotating. Require no outside source of power, internal magnet.</li>
+<li>dual ignition - two magnitos independently drive a spark plug in each of the cylinders. Allowing engine to operate if one magneto or spark plug fails.</li>
+</ul></li>
+<li>Abnormal Combustion
+<dl class="org-dl">
+<dt>Detonation</dt><dd>uncontrolled, explosive ignition. Excessive temperature and pressure. Can lead to failure of piston, cylinder or valves. Less severe causes engine overheating, roughness and loss of power. Caused by overheating engine, lower than recommended fuel grade.</dd>
+<dt>(no term)</dt><dd>Potential is greatest when: takeoff with an engine near maximum allowable temperature, high RPM and low airspeed, extended operations above 75% power with an extremely lean mixture.</dd>
+<dt>(no term)</dt><dd>Cool engine by: retarding throttle, slower climb rate (lower the nose).</dd>
+<dt>Preignition</dt><dd>ignited in advance of normal timed ignition. Caused by residual hot spot in cylinder such as a small carbon deposit on spark plug, cracked ceramic spark plug insulator, any damage around the combustion chamber.</dd>
+<dt>(no term)</dt><dd>Solution is the same: lower engine temperature by retarding throttle, enriching the fuel mixture, lowering the nose attitude.</dd>
+</dl></li>
+<li>Fuel Systems
+<ul class="org-ul">
+<li>Two main types: gravity fed and fuel pump</li>
+<li>Fuel-pump system
+<ul class="org-ul">
+<li>Typically on low wing aircraft and in fuel-injected engines</li>
+<li>Have an auxiliary electric driven pump for engine start and backup</li>
+<li>Includes a fuel pressure gauge for detecting fuel pump malfunctions. If pressure drops, turn on boost pump</li>
+<li>Allowing air to enter the fuel system (such as letting a tank run dry) can make it difficult or impossible to restart the engine.</li>
+<li id="Vapor lock">high engine temperatures cause bubbles of fuel vapor to form in the fuel lines or fuel pump.</li>
+</ul></li>
+<li>Gravity-feed system
+<ul class="org-ul">
+<li>High wing aircraft</li>
+<li>Typically incorporate a primer. Pumps fuel directly into the intake system prior to engine start. useful in cold weather when fuel in the carburetor is difficult to vaporize.</li>
+</ul></li>
+<li>Fuel tanks
+<ul class="org-ul">
+<li>contain a vent to prevent a vacuum from forming</li>
+<li>Can contain an overflow drain</li>
+</ul></li>
+<li>Fuel gauge
+<ul class="org-ul">
+<li>Almost confirm visually.</li>
+</ul></li>
+<li>Fuel strainer - should drain from both the fuel strainer drain and the fuel tank sumps
+<ul class="org-ul">
+<li>visually inspect fuel, check for water</li>
+<li>Good practice is to fill tanks following last flight of day, eliminates air from tanks</li>
+</ul></li>
+<li>Fuel - can substitute to next higher grade if recommended by manufacturer. Should never go to a lower quality.</li>
+<li>Oil
+<dl class="org-dl">
+<dt>Dry-Sump</dt><dd>oil is contained in a separate tank and circulated through the engine by pumps</dd>
+<dt>Wet-Sump</dt><dd>Most light planes. all of the oil is carried in a sump that is an integral part of the engine.</dd>
+<dt>Oil pressure gauge</dt><dd>provides direct indication of oil system operation
+<ul class="org-ul">
+<li>Below normal - oil pump is not putting out enough pressure</li>
+<li>Above normal - clogged line</li>
+<li>Typically will want to shut off engine within 30 seconds in hot weather or 60 seconds in cold weather</li>
+</ul></dd>
+<dt>(no term)</dt><dd>Oil temperature gauge
+<ul class="org-ul">
+<li>Check oil pressure and temperature immediately after starting engine.</li>
+<li>High temperature can indicate plugged oil line or low oil quantity.</li>
+<li>Check during high power and low speed such as during climbs as this increases oil temperature</li>
+</ul></dd>
+<dt>(no term)</dt><dd>Cooling Systems
+<ul class="org-ul">
+<li>Some heat exists through exhaust gases</li>
+<li>Oil transfers some to oil cooler</li>
+<li>Outside air - dissipates from oil cooler and engine cylinders</li>
+<li>Cowl flaps can increase or decrease air flow, helping to maintain a constant temperature</li>
+<li>Excessive engine temperature can result in loss of power, high oil consumption and engine damage</li>
+<li id="Cylinder head temperature gauge">normally in planes with cowl flaps.
+<ul class="org-ul">
+<li>Compare to oil temperature - a disparity can indicate one is malfunctioning</li>
+<li>If too hot: using too much power with mixture set too lean</li>
+<li>To cool: can open cowl flaps, enriching the mixture, reducing rate of climb, increasing airspeed, decreasing power setting</li>
+</ul></li>
+</ul></dd>
+</dl></li>
+<li>Exhaust
+<ul class="org-ul">
+<li>Carbon Monoxide Poisoning. Smelling engine exhaust should assume presence of carbon monoxide. Can also experience headache, dizziness, drowsiness and/or a loss of muscle power.
+<ul class="org-ul">
+<li>Actions: turning off heater, open the fresh air vents, using supplemental oxygen.</li>
+</ul></li>
+</ul></li>
+<li>Propellers
+<ul class="org-ul">
+<li>Fixed-Pitch
+<ul class="org-ul">
+<li>Low blade angle - climb propeller - best performance for takeoff and climb</li>
+<li>High bland angle - cruise propeller - best for high-speed cruise and high-altitude flight</li>
+<li>Have one control: throttle, and one indicator: tachometer</li>
+</ul></li>
+<li>Constant-Speed propeller
+<ul class="org-ul">
+<li>More efficient</li>
+<li>AKA: variable-pitch, controllable-pitch</li>
+<li>Throttle controls engine power output - indicated by manifold pressure gauge</li>
+<li>Propeller controls engine RPM, selects blade angle</li>
+<li>For a given RPM setting, there is a maximum allowable manifold pressure. In general, avoid high manifold pressure with low RPM settings</li>
+</ul></li>
+</ul></li>
+<li>Propeller Hazards</li>
+<li>Electrical systems
+<ul class="org-ul">
+<li>Alternator - Typically 14 or 28 volts.
+<ul class="org-ul">
+<li>Produce AC current, a rectifier converts to DC.</li>
+<li>Should turn off most equipment during engine start to protect against voltage surges from the starter</li>
+</ul></li>
+<li>Battery - mainly to start engine, also backup in case alternator fails</li>
+<li>Ammeter - Monitors electrical current in amperes
+<ul class="org-ul">
+<li>Ammeter measures flow into or out of the battery. Positive is charging. Negative is discharging. Discharge indicates electrical load exceeds the output of the alternator. This requires reducing electrical load and landing as soon as possible.</li>
+<li>Loadmeter - load placed on the alternator. Does not indicate battery charge. Will indicate zero if alternator is malfunctioning.</li>
+</ul></li>
+<li>Master Switch
+<ul class="org-ul">
+<li>Controls entire electrical system except the ignition system</li>
+<li>Engine starter will not operate without master switch since it's power by electrical system, not magnetos</li>
+<li>Split. Bat - Battery only. Alt - Alternator. Can turn off alternator if it malfunctions or when testing.</li>
+</ul></li>
+<li>Circuit Breakers and Fuses
+<ul class="org-ul">
+<li>Resetting will usually re-activate the circuit. Will continue to pop if there is an overload or short.</li>
+<li>Extra fuses required for night flight (if plane has fuses)</li>
+</ul></li>
+<li>Backup Electrical Systems
+<ul class="org-ul">
+<li>Very important for "glass cockpits"</li>
+<li>Dual alternators - might be smaller and connected to an essential bus for only IFR required equipment.</li>
+<li>Standby Battery - Charged by main bus, if voltage drops below 20V, disconnects from main bus and power the essential bus.</li>
+<li>Essential bus powers the primary flight instruments, the Number 1 Nav/Com radio, standby indicator lights - for 30 minutes.</li>
+</ul></li>
+<li>FADEC Backup Power
+<ul class="org-ul">
+<li>Full authority digital engine control (FADEC). Loss of power would mean the computerized engine control units (ECUs) would stop working and the engine stops.</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</div></li>
+<li><a id="org3683a93"></a>Section 3 - flight Instruments<br /><ol class="org-ol"><li><a id="orgf1b47d5"></a>Pitot-Static<br /><div class="outline-text-7" id="text-1-3-1-2-3-1">
+<ul class="org-ul">
+<li>Use air pressure differences to measure speed and altitude</li>
+<li>Airspeed indicator, altimeter, vertical speed indicator</li>
+<li>Airspeed also uses pitot pressure. Others only use static.</li>
+<li>! Instruments required for day VFR flight in a single-engine airplane are: airspeed indicator, altimeter, magnetic compass, tachometer, oil pressure gauge, oil temperature gauge, manifold pressure gauge (for constant-speed propeller), fuel gauge for each tank, landing gear position indicator (for retractable landing gear)</li>
+<li>Air pressure - 14.7 pounds per square inch (lb/in<sup>2</sup>) at sea level. At 18,000 feet, atmospheric pressure is approximately one-half sea-level pressure.</li>
+<li>Lower temperature = lower atmospheric pressure (lowers movement of molecules, exerting less pressure).</li>
+<li>Warmer temperature - high atmospheric pressure</li>
+<li>International Standard Atmosphere (ISA) - sea level, 14.7 lb/in<sup>2</sup>, 15'C (59'F). This is 29.92 inches of mercury (Hg). 1013.2 millibars.</li>
+<li>Standard pressure lapse rate for each 1,000 feet of altitude is approx. 1.00 inches Hg, temperature lapse rate is 2'C (3.5'F)</li>
+<li>! Pitot tube - provides pitot pressure, or impact/ram pressure.</li>
+<li>Static port - normally flush on side of fuselage</li>
+</ul>
+</div>
+<ol class="org-ol"><li><a id="orga0fac63"></a>Airspeed Indicator<br /><div class="outline-text-8" id="text-1-3-1-2-3-1-1">
+<ul class="org-ul">
+<li>Only instrument to use both pitot and static pressure</li>
+<li id="V<sub>S0</sub>">lower limit of white arc - Power-off stall speed at max landing weight in landing configuration</li>
+<li id="V<sub>S1</sub>">lower limit of green arc - power-off stall speed at max takeoff weight in clean configuration</li>
+<li id="White Arc">Flap operating zone - lower limit is full flap stall speed, upper limit max flap speed</li>
+<li id="V<sub>FE</sub>">upper limit of white arc - max speed flaps extended</li>
+<li id="Green Arc">normal operating range</li>
+<li id="V<sub>NO</sub>">upper limit of green arc - max structural cruising speed. Only exceed in smooth air.</li>
+<li id="Yellow Arc">Caution range - only within smooth air and then only with caution.</li>
+<li id="V<sub>NE</sub> (Red Line)">Never-Exceed speed.</li>
+<li>Other V speeds not shown:
+<dl class="org-dl">
+<dt>V<sub>A</sub></dt><dd>maneuvering speed - max speed at which you may apply full and abrupt control movement without the possibility of causing structural damage. Max speed under turbulence. Changes with weight which is why it is not listed on airspeed indicator. higher with higher weight.</dd>
+<dt>V<sub>LE</sub></dt><dd>Not exceed when gear is extended (for retractable gear planes)</dd>
+<dt>V<sub>LO</sub></dt><dd>Max speed to raise/lower landing gear (for retractable gear planes)</dd>
+</dl></li>
+<li>Types of Airspeed
+<dl class="org-dl">
+<dt>Indicated airspeed</dt><dd>directly from airspeed indicator. Stall speed does not change with altitude.</dd>
+<dt>Calibrated Airspeed</dt><dd>IAS corrected for installation and instrument errors.</dd>
+<dt>True Airspeed</dt><dd>CAS corrected for altitude and non-standard temperature. For a given IAS, TAS increases with altitude. 
+(As altitude or air temperature increases, density decreases)</dd>
+<dt>Groundspeed (GS)</dt><dd>Speed of plane over the ground. TAS adjusted for wind. Decreases with headwind, increases with tailwind.</dd>
+</dl></li>
+</ul>
+</div></li>
+<li><a id="orga7f31a0"></a>Altimeter<br /><div class="outline-text-8" id="text-1-3-1-2-3-1-2">
+<dl class="org-dl">
+<dt>Long pointer</dt><dd>hundreds of feet</dd>
+<dt>Medium pointer</dt><dd>thousands of feet</dd>
+<dt>Short pointer</dt><dd>tens of thousands of feet</dd>
+<dt>(no term)</dt><dd>Must set barometric pressure at sea level. Increases about 10 feet for each .01 inch Hg.</dd>
+<dt>(no term)</dt><dd>Types of Altitude:
+<dl class="org-dl">
+<dt>Indicated altitude</dt><dd>altitude measured by altimeter</dd>
+<dt>Pressure altitude</dt><dd>IA when set to 29.92. Distance above theoretical plane where atmospheric pressure is equal to 29.92 (standard datum plane).</dd>
+<dt>Density altitude</dt><dd>Pressure altitude corrected for nonstandard temperature. Increases as ambient temperature increases. Altitude at which the aircraft acts like it is performing.</dd>
+<dt>Calibrated altitude</dt><dd>Indicated altitude corrected to compensate for instrument error.</dd>
+<dt>True altitude</dt><dd>actual height above Mean Sea Level (MSL)</dd>
+<dt>Absolute altitude</dt><dd>Height above ground level (AGL)</dd>
+</dl></dd>
+<dt>(no term)</dt><dd>Altimeter Errors:
+<ul class="org-ul">
+<li>If you fly from area of high pressure to an area of lower pressure, without resetting altimeter, altimeter will indicate higher than true.</li>
+<li>If you fly from an area of low pressure to an area of higher pressure, without resetting altimeter, altimeter will indicate lower than true.</li>
+<li>"When flying from high to low, look out below."</li>
+<li>When temperature is warmer than standard, indicated altitude will be lower than true.</li>
+<li>When temperature is colder than standard, indicated altitude will be higher than true.</li>
+<li>Use caution with extremely low pressure (below 28.00 in Hg) or unusually high pressure (above 31.00 in Hg.) - can affect altimeter accuracy.</li>
+</ul></dd>
+</dl>
+</div></li>
+<li><a id="orgb0c7ba3"></a>Vertical Speed Indicator<br /><div class="outline-text-8" id="text-1-3-1-2-3-1-3">
+<ul class="org-ul">
+<li>(VSI) or Vertical Velocity Indicator (VVI)</li>
+<li id="Trend information">immediate indication of an increase or decrease in rate of climb/descent</li>
+<li id="Rate information">stabilized rate of change</li>
+</ul>
+</div></li>
+<li><a id="orgc548fbd"></a>Blocked Pitot system<br /><div class="outline-text-8" id="text-1-3-1-2-3-1-4">
+<ul class="org-ul">
+<li>moisture, ice, dirt, insects</li>
+<li>If pitot tube is blocked, but drain hole is open - airspeed will read zero</li>
+<li>If pitot tube, drain hole and static system all become clogged, changes in airspeed will not be indicated due to trapped pressures.</li>
+<li>If static system remains clear, airspeed indication will increase with climb and decrease with descent. (backwards than normal, will act like an altimeter)</li>
+</ul>
+</div></li>
+<li><a id="org8bb1f2e"></a>Blocked Static system<br /><div class="outline-text-8" id="text-1-3-1-2-3-1-5">
+<ul class="org-ul">
+<li>Airspeed will continue to operate but is inaccurate - above blocked altitude level, slower than actual. Below blocked altitude, faster than actual.</li>
+<li>Altimeter will freeze at altitude</li>
+<li>VSI - zero indication</li>
+</ul>
+</div></li></ol></li>
+<li><a id="orgd72a56d"></a>Gyroscopic Instruments<br /><div class="outline-text-7" id="text-1-3-1-2-3-2">
+<dl class="org-dl">
+<dt>Rigidity in space</dt><dd>a wheel spun rapidly will remain in a fixed position in the plane on which it is spinning.</dd>
+<dt>Precession</dt><dd>tilting or turning of a gyro in response to pressure</dd>
+<dt>(no term)</dt><dd>Attitude and heading usually powered by vacuume system system. Turn coordinator typically electric.</dd>
+<dt>(no term)</dt><dd></dd>
+</dl>
+</div></li></ol></li></ol></li></ol>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Chris Roberts</p>
+<p class="date">Created: 2017-05-03 Wed 20:58</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
