@@ -1,5 +1,5 @@
 #+TITLE: Flying
-#+SETUPFILE: theme-bigblow-local.setup
+#+SETUPFILE: setup/theme-bigblow-local.setup
 
 * Scenario Based Training
 
@@ -75,382 +75,382 @@
    - Stabilize - allow plane to stabilize
    - Trim - Trim to relieve pressure
 
-** Private Pilot - Ground
+* Private Pilot - Ground
 
-*** Part I - Fundamentals of Flight
-**** Chapter 1 - Discovering Aviation
-***** Pilot Training 
-****** FAA
-       - governs commercial and general aviation
-       - Fixed Base Operators (FBOs) - training schools
-       - Para 141 and Part 61 schools. 
+** Part I - Fundamentals of Flight
+*** Chapter 1 - Discovering Aviation
+**** Pilot Training 
+***** FAA
+      - governs commercial and general aviation
+      - Fixed Base Operators (FBOs) - training schools
+      - Para 141 and Part 61 schools. 
 
-****** TODO Category / Class / Type of Aircraft
-       :PROPERTIES:
-       :ID:       v94dc820wkh0
-       :END:
-       - Category :: aircraft :: intended use of an aircraft
-       - Class :: Airmen :: a classification of aircraft within a category having similar operating characteristics. Single engine, multi-engine, land, water, etc.
-       - Class :: Aircraft :: broad grouping of aircraft having similar characteristics of propulsion, flight, or landing such as airplane, rotorcraft, glider, ballon, landplane, seaplane
-       -  ::
+***** TODO Category / Class / Type of Aircraft
+      :PROPERTIES:
+      :ID:       v94dc820wkh0
+      :END:
+      - Category :: aircraft :: intended use of an aircraft
+      - Class :: Airmen :: a classification of aircraft within a category having similar operating characteristics. Single engine, multi-engine, land, water, etc.
+      - Class :: Aircraft :: broad grouping of aircraft having similar characteristics of propulsion, flight, or landing such as airplane, rotorcraft, glider, ballon, landplane, seaplane
+      -  ::
 
-****** Inspection / Maintenance Requirements
-       - Annual inspection every 12 calendar months. So, if inspection performed on November 1, next inspection is due November 30 of following year.
-       - Rental aircraft must have 100-hour inspections documented. Transponder inspected every 24 calendar months.
-       - Can fly passed 100-hour point to a place where inspection can be completed. Next inspection is due 100 hours from the original expiration time.
-       - If an aircraft is altered in a way that can appreciably change its flight characteristics, it must be flight tested by a person who is rated in that aircraft and who holds at least a private pilot certificate.
-       - Maintenance - normally must be performed by a FAA-certified aviation mechanic
-       - Preventative maintenance - can be performed by a private pilot. Must be entered in the aircraft maintenance records. Including the signature, certificate number, and kind of certificate held by the person approving the work and a description of the work performed.
+***** Inspection / Maintenance Requirements
+      - Annual inspection every 12 calendar months. So, if inspection performed on November 1, next inspection is due November 30 of following year.
+      - Rental aircraft must have 100-hour inspections documented. Transponder inspected every 24 calendar months.
+      - Can fly passed 100-hour point to a place where inspection can be completed. Next inspection is due 100 hours from the original expiration time.
+      - If an aircraft is altered in a way that can appreciably change its flight characteristics, it must be flight tested by a person who is rated in that aircraft and who holds at least a private pilot certificate.
+      - Maintenance - normally must be performed by a FAA-certified aviation mechanic
+      - Preventative maintenance - can be performed by a private pilot. Must be entered in the aircraft maintenance records. Including the signature, certificate number, and kind of certificate held by the person approving the work and a description of the work performed.
 
-****** Private Pilot Certificate
-       - For student pilot: Must be 16, read, speak and understand English
-       - Third-class medical certificate (First-class is for airline transport pilots, second-class for commercial pilot, third-class for student, recreational and private)
-       - For private pilot: at least 17, knowledge test, practical test, training requirements
-       - Does not expire
-       - Flight review every 24 calendar months. One hour of ground instruction and one hour of flight instruction.
-       - To carry passengers, complete three takeoffs and landings in the same category and class of aircraft within the preceding 90 days. 
-       - To carry passengers at night, those takeoffs and landings must be to a full stop and between one hour after sunset and one hour before sunrise.
-       - 
+***** Private Pilot Certificate
+      - For student pilot: Must be 16, read, speak and understand English
+      - Third-class medical certificate (First-class is for airline transport pilots, second-class for commercial pilot, third-class for student, recreational and private)
+      - For private pilot: at least 17, knowledge test, practical test, training requirements
+      - Does not expire
+      - Flight review every 24 calendar months. One hour of ground instruction and one hour of flight instruction.
+      - To carry passengers, complete three takeoffs and landings in the same category and class of aircraft within the preceding 90 days. 
+      - To carry passengers at night, those takeoffs and landings must be to a full stop and between one hour after sunset and one hour before sunrise.
+      - 
 
-***** Aviation Opportunities
+**** Aviation Opportunities
 
-      - Plane Parachute :: must have been packed by a certificated and appropriately rated parachute rigger. Within preceding 90 days is natural materials, 180 days if synthetic materials.
-      - Clubs:
-        - AOPA
-        - Experimental Aircraft Association (EAA)
-        - Civil Air Patrol (CAP) - 90 percent of search and rescue missions
-      - High performance airplane :: more than 200 horsepower
-      - Complex airplane :: retractable landing gear, flaps, controllable-pitch propeller. 
-      - Full authority digital engine control (FADEC) - considered to have a controllable propeller
-      - Ratings:
-        - Instrument rating :: May operate under IFR conditions. 40 hours of instrument time. Knowledge test, practical test. 
-        - Class Ratings :: Multi-engine, seaplane.
-        - Multi-engine :: Practical test.
-        - Seaplane :: Practical test.
-        - Commercial :: 190-250 hours of flight time is required. Minimum of 100 hours PIC, 50 hours cross-country. 10 hours in complex plane. Knowledge test, practical test.
-        - CFI :: two knowledge exams and a practical test
-        - ATP :: 23 yo, 1,500 hours of flight time, 250 hours PIC, 500 cross-country, 100 night flight, 75 horus instrument. Knowledge test. Practical test.
-***** Human Factors
-      - Single-Pilot Resource Management (SRM) :: art and science of managing all available resources prior and during flight
-      - Aviation physiology  :: study of the performance and limitations of the body in the flight environment
-****** SRM 
-       - Six concepts:
-         - Aeronautical decision making
-         - Risk management
-         - Task management
-         - Situational Awareness
-         - Controlled flight into terrain awareness
-         - Automation management
-******* Aeronautical Decision Making
-        - ADM :: systematic approach to the mental process to consistently determine the best course of action
-        - ADM Process:
-          - Recognize a change.
-          - Define the problem.
-          - Choose a course of action. Consider possibilities and risk of each.
-          - Implement your decision.
-          - Evaluate the outcome.
-        - There are a variety of mnemonics to remember the steps: FORDEC, NMATE, DODAR, SAFE, DECIDE
-        - FAA's DECIDE model:
-          - Detect the fact that a change has occurred
-          - Estimate the need to counter or react to the change
-          - Choose a desirable outcome for the success of the flight
-          - Identify actions which could successfully control the change
-          - Do the necessary action to adapt to the change
-          - Evaluate the effect of the action
-        - Self-Assessment
-          - Check self: helath, stress, fatigue, attitude, knowledge, skill level, recency of experience
-          - Establish personal limitations
-          - Create a checklist (such as I'm SAFE)
-        - I'm Safe Checklist:
-          - Illness - Do I have symptoms?
-          - Medication
-          - Stress
-          - Alcohol
-          - Fatigue
-          - Eating
-          - Emotion
-        - Hazardous attitudes
-          - Anti-authority. "Don't tell me" Antidote: Follow the rules, they are usually right.
-          - Impulsivity. "Do it quickly" Antidote: Not so fast, think first.
-          - Invulnerability. "It won't happen to me." Antidote: It could happen to me.
-          - Macho. "I can do it." Antidote: Taking chances is foolish.
-          - Resignation. "What's the use?" Antidote: I'm not helpless, I can make a difference.
-        - Self-critiques
-          - Perform self-critiques after each flight to evaluate performance, determine skills to improve, create a plan. 
-******* Risk Management
-        - PAVE:
-          - Pilot - Evaluate your training, experience and fitness
-          - Aircraft - Determine airworthiness, performance, proper configuration. Avionics airworthiness.
-          - EnVironment - Airport conditions, terrain, airspace, weather
-          - External Pressures - How critical is it to maintain schedule
-        - 5 Ps:
-          - Pilot - Training, experience, fitness
-          - Passengers - Passenger's experience, flexibility and fitness
-          - Plane - Airworthiness, performance, proper configuration
-          - Programming - avionics airworthiness, operation, configuration
-          - Plan - airport conditions, terrain, airspace, weather. Mission, purpose of flight, criticalness to maintain schedule.
-        - 5Ps should be re-evaluated throughout flight
-          - Before Takeoff
-          - Climb and Initial Cruise
-          - Enroute Cruise
-          - Descent
-          - Before Approach and Landing
-******* Task Management
-        - Planning and prioritizing - learn what can be done ahead of time and what must be done in the moment
-        - Resource use - learn to recognize all resources available
-        - Checklists - 
-          - Do list - perform items in sequence
-          - Flow pattern - guide through cockpit in a logical order, then refer to checklist
-          - Emergency - perform from memory before referring to checklist
-******* Situational Awareness
-        - Accurate perception of all the operational and environmental factors that affect flight safety before, during and after the flight
-        - Maintaining a solid mental picture of the condition of the pilot, passengers, plane, programming and plane
-        - Briefings - tool to prepare for critical phases of flight. Passenger briefing, takeoff briefing, before-landing briefing
-        - Passenger briefing - SAFETY
-          - Safety belts - how to use, when to use (taxi, takeoff, landing)
-          - Air Vents - location & operation
-          - Fire Extinguisher - location, operation
-          - Egress and Emergency - Operations of doors, windows, survival kit, use of onboard emergency equipment
-          - Traffic and Talking - Pointing out traffic, use of headsets, unnecessary conversation during critical phases of flight
-          - Your Questions - Solicit questions from passengers
-        - Take-off Briefing 
-          - Wind direction, velocity
-          - Runway length
-          - Takeoff distance
-          - Initial heading
-          - Initial altitude
-          - Takeoff and climb speeds
-          - Departure procedures
-          - Emergency plan in case of engine failure
-        - Before-landing briefing
-          - Airport information and weather conditions
-          - Active runway
-          - Terrain and obstacles
-          - Airport elevation and pattern altitude
-          - Traffic pattern entry
-        - Obstacles to situational awareness
-          - Fixating on one aspect of flight. Distraction.
-          - Complacency - automation can create complacency
-******* Controlled Flight into Terrain Awareness
-        - CFIT :: occurs when an aircraft is flow into terrain or water with no prior awareness on the part of the crew that the crash is imminent.
-        - Strategies to prevent:
-          - Plan your flight to avoid terrain and obstacles
-          - Use current charts and procedures
-          - Monitor terrain awareness and navigation displays
-          - Determine your airplane's performance
-******* Automation Management
-        - Use to manage workload
-        - Monitor current mode, anticipate next mode, and verify
-        - Can lead to complacency and loss of situational awareness
-        - Three equipment operating levels:
-          - Level 1: Manual
-          - Level 2: Use autopilot to help manage workload, but manually control plane at times. Use avionics to enhance situational awareness.
-          - Level 3: Control primarily with autopilot, use navigation and flight planning tools.
-****** Aviation Physiology
-       - Pressure effects
-         - Ear and sinus block
-         - Toothache
-         - Gastrointestinal
-         - Scuba diving - 12 hours before ascending to 8,000 MSL for nondecompression stop diving, 24 hours for a decompression stop dive
-         - Motion sickness
+     - Plane Parachute :: must have been packed by a certificated and appropriately rated parachute rigger. Within preceding 90 days is natural materials, 180 days if synthetic materials.
+     - Clubs:
+       - AOPA
+       - Experimental Aircraft Association (EAA)
+       - Civil Air Patrol (CAP) - 90 percent of search and rescue missions
+     - High performance airplane :: more than 200 horsepower
+     - Complex airplane :: retractable landing gear, flaps, controllable-pitch propeller. 
+     - Full authority digital engine control (FADEC) - considered to have a controllable propeller
+     - Ratings:
+       - Instrument rating :: May operate under IFR conditions. 40 hours of instrument time. Knowledge test, practical test. 
+       - Class Ratings :: Multi-engine, seaplane.
+       - Multi-engine :: Practical test.
+       - Seaplane :: Practical test.
+       - Commercial :: 190-250 hours of flight time is required. Minimum of 100 hours PIC, 50 hours cross-country. 10 hours in complex plane. Knowledge test, practical test.
+       - CFI :: two knowledge exams and a practical test
+       - ATP :: 23 yo, 1,500 hours of flight time, 250 hours PIC, 500 cross-country, 100 night flight, 75 horus instrument. Knowledge test. Practical test.
+**** Human Factors
+     - Single-Pilot Resource Management (SRM) :: art and science of managing all available resources prior and during flight
+     - Aviation physiology  :: study of the performance and limitations of the body in the flight environment
+***** SRM 
+      - Six concepts:
+        - Aeronautical decision making
+        - Risk management
+        - Task management
+        - Situational Awareness
+        - Controlled flight into terrain awareness
+        - Automation management
+****** Aeronautical Decision Making
+       - ADM :: systematic approach to the mental process to consistently determine the best course of action
+       - ADM Process:
+         - Recognize a change.
+         - Define the problem.
+         - Choose a course of action. Consider possibilities and risk of each.
+         - Implement your decision.
+         - Evaluate the outcome.
+       - There are a variety of mnemonics to remember the steps: FORDEC, NMATE, DODAR, SAFE, DECIDE
+       - FAA's DECIDE model:
+         - Detect the fact that a change has occurred
+         - Estimate the need to counter or react to the change
+         - Choose a desirable outcome for the success of the flight
+         - Identify actions which could successfully control the change
+         - Do the necessary action to adapt to the change
+         - Evaluate the effect of the action
+       - Self-Assessment
+         - Check self: helath, stress, fatigue, attitude, knowledge, skill level, recency of experience
+         - Establish personal limitations
+         - Create a checklist (such as I'm SAFE)
+       - I'm Safe Checklist:
+         - Illness - Do I have symptoms?
+         - Medication
          - Stress
+         - Alcohol
          - Fatigue
-         - Noise
-         - Alcohol, drugs and performance: FARs require less than .04 pecent and 8 hours bottle to throttle. Best to allow 12 hours bottle to throttle. Commercial airlines require 24. 
-         - Stimulants - can produce anxiety and mood swings
-         -
-**** Chapter 2 - Airplane Systems
-***** Section A - 
-      - Pilot Operating Handbook (POH) - pertinent information about a particular make and model
-      - FAA approved airplane flight manual (AFM) - required after March 1, 1979. In most cases the POH is also the designated ARM.
-      - Pilot's information manual (PIM) - Same as POH/AFM except for precise weight and balance data and optional equipment specific to a particular airplane
-      - Aircraft operating limitations may be found in the approved flight manual, markings, placards, or a combination of these.
-      - An experimental or light-sport aircraft's operating limitations are part of Form 8130-7, which is the special airworthiness certificate. This must be carried in the aircraft.
-***** Section B - Powerplant 
-      - Reciprocating Engines
-        - Radial - three blades
-        - Horizontally opposed - two
-      - Turbine Engines
-        - Turboprop
-        - Turbojet
-      - Reciprocating
-        - 4 Stroke Cycle:
-          - Intake of fuel/air
-          - Compression
-          - Ignition and expansion of the gases
-          - Venting of the burned gases
-      - Effectively the same cycles in a turbojet but simultaneous
-      - Intake - usually through filter, must have alternate in case filter is clogged
-      - Carburetor - where fuel is mixed with the air
-        - Operating principle of float-type carburetor is based on the difference in pressure at the venturi throat and the air inlet
-        - When you lean the mixture, you decrease the fuel flow to compensate for decreased air density. Leaning the mixture can eliminate engine roughness during runup at high-elevation airports.
-        - At high altitudes, mixture can be too rich, lowering temperature in cylinder, not allowing complete combustion, leaving carbon buildup, causing roughness. Most prevalent at high-elevation airports, during climbs or cruise flight at high altitude.
-        - During descent, must enrich. Overly lean can result in high engine temperatures.
-        - Best way to maintain proper mixture - monitor engine temperature.
-        - One disadvantage of a float-type carburetor is its icing tendency. Typically below 70'F and Relative humidity above 80%. Can occur up to 100'F and as low as 50% humidity. 
-          - ! decrease in RPM, roughness, possible stoppage
-          - For constant-speed propeller - decrease in manifold pressure instead of RPM
-          - Most common during reduced power - such as descents
-          - Carburetor heat - heats air before entering carburetor - causes slight decrease in power. Slight decrease in RPM, followed by gradual increase as ice melts. For constant speed prop - power changes shown in manifold pressure.
-          - First indication - lost of RPM, will increase as ice melts
-          - Should use full carb heat whenever you reduce engine RPM below normal operating range, or suspect ice
-        - Fuel injection - replaces carburetor. No ice, fuel metering more precise, distribution of fuel/air mixture is more consistent. So higher engine efficiency, lower fuel consumption, increased horsepower, lower operating temperature, longer engine life. Disadvantages: increased sensitivity to fuel contaminants, more complex starting procedures. 
-          - Supercharge - Higher altitudes reduce engine power due to lower air density. Supercharging compresses incoming air using a pump.
-          - Turbocharge - Pressurizes air using mechanism driven by exhaust gases. More efficient.
-        - Ignition System
-          - Magneto - suppies electrical current to the spark plug. Operates whenever the crankshaft is rotating. Require no outside source of power, internal magnet. 
-          - dual ignition - two magnitos independently drive a spark plug in each of the cylinders. Allowing engine to operate if one magneto or spark plug fails.
-        - Abnormal Combustion
-          - Detonation :: uncontrolled, explosive ignition. Excessive temperature and pressure. Can lead to failure of piston, cylinder or valves. Less severe causes engine overheating, roughness and loss of power. Caused by overheating engine, lower than recommended fuel grade.
-          - Potential is greatest when: takeoff with an engine near maximum allowable temperature, high RPM and low airspeed, extended operations above 75% power with an extremely lean mixture.
-          - Cool engine by: retarding throttle, slower climb rate (lower the nose).
-          - Preignition :: ignited in advance of normal timed ignition. Caused by residual hot spot in cylinder such as a small carbon deposit on spark plug, cracked ceramic spark plug insulator, any damage around the combustion chamber.
-          - Solution is the same: lower engine temperature by retarding throttle, enriching the fuel mixture, lowering the nose attitude.  
-        - Fuel Systems
-          - Two main types: gravity fed and fuel pump
-          - Fuel-pump system
-            - Typically on low wing aircraft and in fuel-injected engines
-            - Have an auxiliary electric driven pump for engine start and backup
-            - Includes a fuel pressure gauge for detecting fuel pump malfunctions. If pressure drops, turn on boost pump
-            - Allowing air to enter the fuel system (such as letting a tank run dry) can make it difficult or impossible to restart the engine.
-            - Vapor lock :: high engine temperatures cause bubbles of fuel vapor to form in the fuel lines or fuel pump.
-          - Gravity-feed system
-            - High wing aircraft
-            - Typically incorporate a primer. Pumps fuel directly into the intake system prior to engine start. useful in cold weather when fuel in the carburetor is difficult to vaporize.
-          - Fuel tanks
-            - contain a vent to prevent a vacuum from forming
-            - Can contain an overflow drain
-          - Fuel gauge
-            - Almost confirm visually.
-          - Fuel strainer - should drain from both the fuel strainer drain and the fuel tank sumps
-            - visually inspect fuel, check for water
-            - Good practice is to fill tanks following last flight of day, eliminates air from tanks
-          - Fuel - can substitute to next higher grade if recommended by manufacturer. Should never go to a lower quality.
-          - Oil
-            - Dry-Sump :: oil is contained in a separate tank and circulated through the engine by pumps
-            - Wet-Sump :: Most light planes. all of the oil is carried in a sump that is an integral part of the engine.
-            - Oil pressure gauge :: provides direct indication of oil system operation
-              - Below normal - oil pump is not putting out enough pressure
-              - Above normal - clogged line
-              - Typically will want to shut off engine within 30 seconds in hot weather or 60 seconds in cold weather
-            - Oil temperature gauge
-              - Check oil pressure and temperature immediately after starting engine.
-              - High temperature can indicate plugged oil line or low oil quantity.
-              - Check during high power and low speed such as during climbs as this increases oil temperature
-            - Cooling Systems
-              - Some heat exists through exhaust gases
-              - Oil transfers some to oil cooler
-              - Outside air - dissipates from oil cooler and engine cylinders
-              - Cowl flaps can increase or decrease air flow, helping to maintain a constant temperature
-              - Excessive engine temperature can result in loss of power, high oil consumption and engine damage
-              - Cylinder head temperature gauge :: normally in planes with cowl flaps.
-                - Compare to oil temperature - a disparity can indicate one is malfunctioning
-                - If too hot: using too much power with mixture set too lean
-                - To cool: can open cowl flaps, enriching the mixture, reducing rate of climb, increasing airspeed, decreasing power setting
-          - Exhaust
-            - Carbon Monoxide Poisoning. Smelling engine exhaust should assume presence of carbon monoxide. Can also experience headache, dizziness, drowsiness and/or a loss of muscle power.
-              - Actions: turning off heater, open the fresh air vents, using supplemental oxygen.
-          - Propellers
-            - Fixed-Pitch
-              - Low blade angle - climb propeller - best performance for takeoff and climb
-              - High bland angle - cruise propeller - best for high-speed cruise and high-altitude flight
-              - Have one control: throttle, and one indicator: tachometer
-            - Constant-Speed propeller
-              - More efficient
-              - AKA: variable-pitch, controllable-pitch
-              - Throttle controls engine power output - indicated by manifold pressure gauge
-              - Propeller controls engine RPM, selects blade angle
-              - For a given RPM setting, there is a maximum allowable manifold pressure. In general, avoid high manifold pressure with low RPM settings
-          - Propeller Hazards
-          - Electrical systems
-            - Alternator - Typically 14 or 28 volts.
-              - Produce AC current, a rectifier converts to DC.
-              - Should turn off most equipment during engine start to protect against voltage surges from the starter
-            - Battery - mainly to start engine, also backup in case alternator fails
-            - Ammeter - Monitors electrical current in amperes
-              - Ammeter measures flow into or out of the battery. Positive is charging. Negative is discharging. Discharge indicates electrical load exceeds the output of the alternator. This requires reducing electrical load and landing as soon as possible. 
-              - Loadmeter - load placed on the alternator. Does not indicate battery charge. Will indicate zero if alternator is malfunctioning.
-            - Master Switch
-              - Controls entire electrical system except the ignition system
-              - Engine starter will not operate without master switch since it's power by electrical system, not magnetos
-              - Split. Bat - Battery only. Alt - Alternator. Can turn off alternator if it malfunctions or when testing.
-            - Circuit Breakers and Fuses
-              - Resetting will usually re-activate the circuit. Will continue to pop if there is an overload or short.
-              - Extra fuses required for night flight (if plane has fuses)
-            - Backup Electrical Systems
-              - Very important for "glass cockpits"
-              - Dual alternators - might be smaller and connected to an essential bus for only IFR required equipment.
-              - Standby Battery - Charged by main bus, if voltage drops below 20V, disconnects from main bus and power the essential bus.
-              - Essential bus powers the primary flight instruments, the Number 1 Nav/Com radio, standby indicator lights - for 30 minutes.
-            - FADEC Backup Power
-              - Full authority digital engine control (FADEC). Loss of power would mean the computerized engine control units (ECUs) would stop working and the engine stops. 
-***** Section 3 - flight Instruments
-****** Pitot-Static
-       - Use air pressure differences to measure speed and altitude
-       - Airspeed indicator, altimeter, vertical speed indicator
-       - Airspeed also uses pitot pressure. Others only use static.
-       - ! Instruments required for day VFR flight in a single-engine airplane are: airspeed indicator, altimeter, magnetic compass, tachometer, oil pressure gauge, oil temperature gauge, manifold pressure gauge (for constant-speed propeller), fuel gauge for each tank, landing gear position indicator (for retractable landing gear)
-       - Air pressure - 14.7 pounds per square inch (lb/in^2) at sea level. At 18,000 feet, atmospheric pressure is approximately one-half sea-level pressure.
-       - Lower temperature = lower atmospheric pressure (lowers movement of molecules, exerting less pressure).
-       - Warmer temperature - high atmospheric pressure
-       - International Standard Atmosphere (ISA) - sea level, 14.7 lb/in^2, 15'C (59'F). This is 29.92 inches of mercury (Hg). 1013.2 millibars.
-       - Standard pressure lapse rate for each 1,000 feet of altitude is approx. 1.00 inches Hg, temperature lapse rate is 2'C (3.5'F)
-       - ! Pitot tube - provides pitot pressure, or impact/ram pressure.
-       - Static port - normally flush on side of fuselage
-******* Airspeed Indicator
-       - Only instrument to use both pitot and static pressure
-       - V_S0 :: lower limit of white arc - Power-off stall speed at max landing weight in landing configuration
-       - V_S1 :: lower limit of green arc - power-off stall speed at max takeoff weight in clean configuration
-       - White Arc :: Flap operating zone - lower limit is full flap stall speed, upper limit max flap speed
-       - V_FE :: upper limit of white arc - max speed flaps extended
-       - Green Arc :: normal operating range
-       - V_NO :: upper limit of green arc - max structural cruising speed. Only exceed in smooth air.
-       - Yellow Arc :: Caution range - only within smooth air and then only with caution.
-       - V_NE (Red Line) :: Never-Exceed speed.
-       - Other V speeds not shown:
-         - V_A :: maneuvering speed - max speed at which you may apply full and abrupt control movement without the possibility of causing structural damage. Max speed under turbulence. Changes with weight which is why it is not listed on airspeed indicator. higher with higher weight.
-         - V_LE :: Not exceed when gear is extended (for retractable gear planes)
-         - V_LO :: Max speed to raise/lower landing gear (for retractable gear planes)
-       - Types of Airspeed
-         - Indicated airspeed :: directly from airspeed indicator. Stall speed does not change with altitude. 
-         - Calibrated Airspeed :: IAS corrected for installation and instrument errors.
-         - True Airspeed :: CAS corrected for altitude and non-standard temperature. For a given IAS, TAS increases with altitude. 
-                            (As altitude or air temperature increases, density decreases)
-         - Groundspeed (GS) :: Speed of plane over the ground. TAS adjusted for wind. Decreases with headwind, increases with tailwind.
-******* Altimeter
-       - Long pointer :: hundreds of feet
-       - Medium pointer :: thousands of feet
-       - Short pointer :: tens of thousands of feet
-       - Must set barometric pressure at sea level. Increases about 10 feet for each .01 inch Hg.
-       - Types of Altitude:
-         - Indicated altitude :: altitude measured by altimeter
-         - Pressure altitude :: IA when set to 29.92. Distance above theoretical plane where atmospheric pressure is equal to 29.92 (standard datum plane).
-         - Density altitude :: Pressure altitude corrected for nonstandard temperature. Increases as ambient temperature increases. Altitude at which the aircraft acts like it is performing.
-         - Calibrated altitude :: Indicated altitude corrected to compensate for instrument error.
-         - True altitude :: actual height above Mean Sea Level (MSL)
-         - Absolute altitude :: Height above ground level (AGL)
-       - Altimeter Errors:
-         - If you fly from area of high pressure to an area of lower pressure, without resetting altimeter, altimeter will indicate higher than true.
-         - If you fly from an area of low pressure to an area of higher pressure, without resetting altimeter, altimeter will indicate lower than true.
-         - "When flying from high to low, look out below."
-         - When temperature is warmer than standard, indicated altitude will be lower than true.
-         - When temperature is colder than standard, indicated altitude will be higher than true.
-         - Use caution with extremely low pressure (below 28.00 in Hg) or unusually high pressure (above 31.00 in Hg.) - can affect altimeter accuracy.
-******* Vertical Speed Indicator
-        - (VSI) or Vertical Velocity Indicator (VVI)
-        - Trend information :: immediate indication of an increase or decrease in rate of climb/descent
-        - Rate information :: stabilized rate of change
-******* Blocked Pitot system
-        - moisture, ice, dirt, insects
-        - If pitot tube is blocked, but drain hole is open - airspeed will read zero
-        - If pitot tube, drain hole and static system all become clogged, changes in airspeed will not be indicated due to trapped pressures.
-        - If static system remains clear, airspeed indication will increase with climb and decrease with descent. (backwards than normal, will act like an altimeter)
-******* Blocked Static system
-        - Airspeed will continue to operate but is inaccurate - above blocked altitude level, slower than actual. Below blocked altitude, faster than actual. 
-        - Altimeter will freeze at altitude
-        - VSI - zero indication
-****** Gyroscopic Instruments
-       - Rigidity in space :: a wheel spun rapidly will remain in a fixed position in the plane on which it is spinning.
-       - Precession :: tilting or turning of a gyro in response to pressure
-       - Attitude and heading usually powered by vacuume system system. Turn coordinator typically electric.
-       -  
+         - Eating
+         - Emotion
+       - Hazardous attitudes
+         - Anti-authority. "Don't tell me" Antidote: Follow the rules, they are usually right.
+         - Impulsivity. "Do it quickly" Antidote: Not so fast, think first.
+         - Invulnerability. "It won't happen to me." Antidote: It could happen to me.
+         - Macho. "I can do it." Antidote: Taking chances is foolish.
+         - Resignation. "What's the use?" Antidote: I'm not helpless, I can make a difference.
+       - Self-critiques
+         - Perform self-critiques after each flight to evaluate performance, determine skills to improve, create a plan. 
+****** Risk Management
+       - PAVE:
+         - Pilot - Evaluate your training, experience and fitness
+         - Aircraft - Determine airworthiness, performance, proper configuration. Avionics airworthiness.
+         - EnVironment - Airport conditions, terrain, airspace, weather
+         - External Pressures - How critical is it to maintain schedule
+       - 5 Ps:
+         - Pilot - Training, experience, fitness
+         - Passengers - Passenger's experience, flexibility and fitness
+         - Plane - Airworthiness, performance, proper configuration
+         - Programming - avionics airworthiness, operation, configuration
+         - Plan - airport conditions, terrain, airspace, weather. Mission, purpose of flight, criticalness to maintain schedule.
+       - 5Ps should be re-evaluated throughout flight
+         - Before Takeoff
+         - Climb and Initial Cruise
+         - Enroute Cruise
+         - Descent
+         - Before Approach and Landing
+****** Task Management
+       - Planning and prioritizing - learn what can be done ahead of time and what must be done in the moment
+       - Resource use - learn to recognize all resources available
+       - Checklists - 
+         - Do list - perform items in sequence
+         - Flow pattern - guide through cockpit in a logical order, then refer to checklist
+         - Emergency - perform from memory before referring to checklist
+****** Situational Awareness
+       - Accurate perception of all the operational and environmental factors that affect flight safety before, during and after the flight
+       - Maintaining a solid mental picture of the condition of the pilot, passengers, plane, programming and plane
+       - Briefings - tool to prepare for critical phases of flight. Passenger briefing, takeoff briefing, before-landing briefing
+       - Passenger briefing - SAFETY
+         - Safety belts - how to use, when to use (taxi, takeoff, landing)
+         - Air Vents - location & operation
+         - Fire Extinguisher - location, operation
+         - Egress and Emergency - Operations of doors, windows, survival kit, use of onboard emergency equipment
+         - Traffic and Talking - Pointing out traffic, use of headsets, unnecessary conversation during critical phases of flight
+         - Your Questions - Solicit questions from passengers
+       - Take-off Briefing 
+         - Wind direction, velocity
+         - Runway length
+         - Takeoff distance
+         - Initial heading
+         - Initial altitude
+         - Takeoff and climb speeds
+         - Departure procedures
+         - Emergency plan in case of engine failure
+       - Before-landing briefing
+         - Airport information and weather conditions
+         - Active runway
+         - Terrain and obstacles
+         - Airport elevation and pattern altitude
+         - Traffic pattern entry
+       - Obstacles to situational awareness
+         - Fixating on one aspect of flight. Distraction.
+         - Complacency - automation can create complacency
+****** Controlled Flight into Terrain Awareness
+       - CFIT :: occurs when an aircraft is flow into terrain or water with no prior awareness on the part of the crew that the crash is imminent.
+       - Strategies to prevent:
+         - Plan your flight to avoid terrain and obstacles
+         - Use current charts and procedures
+         - Monitor terrain awareness and navigation displays
+         - Determine your airplane's performance
+****** Automation Management
+       - Use to manage workload
+       - Monitor current mode, anticipate next mode, and verify
+       - Can lead to complacency and loss of situational awareness
+       - Three equipment operating levels:
+         - Level 1: Manual
+         - Level 2: Use autopilot to help manage workload, but manually control plane at times. Use avionics to enhance situational awareness.
+         - Level 3: Control primarily with autopilot, use navigation and flight planning tools.
+***** Aviation Physiology
+      - Pressure effects
+        - Ear and sinus block
+        - Toothache
+        - Gastrointestinal
+        - Scuba diving - 12 hours before ascending to 8,000 MSL for nondecompression stop diving, 24 hours for a decompression stop dive
+        - Motion sickness
+        - Stress
+        - Fatigue
+        - Noise
+        - Alcohol, drugs and performance: FARs require less than .04 pecent and 8 hours bottle to throttle. Best to allow 12 hours bottle to throttle. Commercial airlines require 24. 
+        - Stimulants - can produce anxiety and mood swings
+        -
+*** Chapter 2 - Airplane Systems
+**** Section A - 
+     - Pilot Operating Handbook (POH) - pertinent information about a particular make and model
+     - FAA approved airplane flight manual (AFM) - required after March 1, 1979. In most cases the POH is also the designated ARM.
+     - Pilot's information manual (PIM) - Same as POH/AFM except for precise weight and balance data and optional equipment specific to a particular airplane
+     - Aircraft operating limitations may be found in the approved flight manual, markings, placards, or a combination of these.
+     - An experimental or light-sport aircraft's operating limitations are part of Form 8130-7, which is the special airworthiness certificate. This must be carried in the aircraft.
+**** Section B - Powerplant 
+     - Reciprocating Engines
+       - Radial - three blades
+       - Horizontally opposed - two
+     - Turbine Engines
+       - Turboprop
+       - Turbojet
+     - Reciprocating
+       - 4 Stroke Cycle:
+         - Intake of fuel/air
+         - Compression
+         - Ignition and expansion of the gases
+         - Venting of the burned gases
+     - Effectively the same cycles in a turbojet but simultaneous
+     - Intake - usually through filter, must have alternate in case filter is clogged
+     - Carburetor - where fuel is mixed with the air
+       - Operating principle of float-type carburetor is based on the difference in pressure at the venturi throat and the air inlet
+       - When you lean the mixture, you decrease the fuel flow to compensate for decreased air density. Leaning the mixture can eliminate engine roughness during runup at high-elevation airports.
+       - At high altitudes, mixture can be too rich, lowering temperature in cylinder, not allowing complete combustion, leaving carbon buildup, causing roughness. Most prevalent at high-elevation airports, during climbs or cruise flight at high altitude.
+       - During descent, must enrich. Overly lean can result in high engine temperatures.
+       - Best way to maintain proper mixture - monitor engine temperature.
+       - One disadvantage of a float-type carburetor is its icing tendency. Typically below 70'F and Relative humidity above 80%. Can occur up to 100'F and as low as 50% humidity. 
+         - ! decrease in RPM, roughness, possible stoppage
+         - For constant-speed propeller - decrease in manifold pressure instead of RPM
+         - Most common during reduced power - such as descents
+         - Carburetor heat - heats air before entering carburetor - causes slight decrease in power. Slight decrease in RPM, followed by gradual increase as ice melts. For constant speed prop - power changes shown in manifold pressure.
+         - First indication - lost of RPM, will increase as ice melts
+         - Should use full carb heat whenever you reduce engine RPM below normal operating range, or suspect ice
+       - Fuel injection - replaces carburetor. No ice, fuel metering more precise, distribution of fuel/air mixture is more consistent. So higher engine efficiency, lower fuel consumption, increased horsepower, lower operating temperature, longer engine life. Disadvantages: increased sensitivity to fuel contaminants, more complex starting procedures. 
+         - Supercharge - Higher altitudes reduce engine power due to lower air density. Supercharging compresses incoming air using a pump.
+         - Turbocharge - Pressurizes air using mechanism driven by exhaust gases. More efficient.
+       - Ignition System
+         - Magneto - suppies electrical current to the spark plug. Operates whenever the crankshaft is rotating. Require no outside source of power, internal magnet. 
+         - dual ignition - two magnitos independently drive a spark plug in each of the cylinders. Allowing engine to operate if one magneto or spark plug fails.
+       - Abnormal Combustion
+         - Detonation :: uncontrolled, explosive ignition. Excessive temperature and pressure. Can lead to failure of piston, cylinder or valves. Less severe causes engine overheating, roughness and loss of power. Caused by overheating engine, lower than recommended fuel grade.
+         - Potential is greatest when: takeoff with an engine near maximum allowable temperature, high RPM and low airspeed, extended operations above 75% power with an extremely lean mixture.
+         - Cool engine by: retarding throttle, slower climb rate (lower the nose).
+         - Preignition :: ignited in advance of normal timed ignition. Caused by residual hot spot in cylinder such as a small carbon deposit on spark plug, cracked ceramic spark plug insulator, any damage around the combustion chamber.
+         - Solution is the same: lower engine temperature by retarding throttle, enriching the fuel mixture, lowering the nose attitude.  
+       - Fuel Systems
+         - Two main types: gravity fed and fuel pump
+         - Fuel-pump system
+           - Typically on low wing aircraft and in fuel-injected engines
+           - Have an auxiliary electric driven pump for engine start and backup
+           - Includes a fuel pressure gauge for detecting fuel pump malfunctions. If pressure drops, turn on boost pump
+           - Allowing air to enter the fuel system (such as letting a tank run dry) can make it difficult or impossible to restart the engine.
+           - Vapor lock :: high engine temperatures cause bubbles of fuel vapor to form in the fuel lines or fuel pump.
+         - Gravity-feed system
+           - High wing aircraft
+           - Typically incorporate a primer. Pumps fuel directly into the intake system prior to engine start. useful in cold weather when fuel in the carburetor is difficult to vaporize.
+         - Fuel tanks
+           - contain a vent to prevent a vacuum from forming
+           - Can contain an overflow drain
+         - Fuel gauge
+           - Almost confirm visually.
+         - Fuel strainer - should drain from both the fuel strainer drain and the fuel tank sumps
+           - visually inspect fuel, check for water
+           - Good practice is to fill tanks following last flight of day, eliminates air from tanks
+         - Fuel - can substitute to next higher grade if recommended by manufacturer. Should never go to a lower quality.
+         - Oil
+           - Dry-Sump :: oil is contained in a separate tank and circulated through the engine by pumps
+           - Wet-Sump :: Most light planes. all of the oil is carried in a sump that is an integral part of the engine.
+           - Oil pressure gauge :: provides direct indication of oil system operation
+             - Below normal - oil pump is not putting out enough pressure
+             - Above normal - clogged line
+             - Typically will want to shut off engine within 30 seconds in hot weather or 60 seconds in cold weather
+           - Oil temperature gauge
+             - Check oil pressure and temperature immediately after starting engine.
+             - High temperature can indicate plugged oil line or low oil quantity.
+             - Check during high power and low speed such as during climbs as this increases oil temperature
+           - Cooling Systems
+             - Some heat exists through exhaust gases
+             - Oil transfers some to oil cooler
+             - Outside air - dissipates from oil cooler and engine cylinders
+             - Cowl flaps can increase or decrease air flow, helping to maintain a constant temperature
+             - Excessive engine temperature can result in loss of power, high oil consumption and engine damage
+             - Cylinder head temperature gauge :: normally in planes with cowl flaps.
+               - Compare to oil temperature - a disparity can indicate one is malfunctioning
+               - If too hot: using too much power with mixture set too lean
+               - To cool: can open cowl flaps, enriching the mixture, reducing rate of climb, increasing airspeed, decreasing power setting
+         - Exhaust
+           - Carbon Monoxide Poisoning. Smelling engine exhaust should assume presence of carbon monoxide. Can also experience headache, dizziness, drowsiness and/or a loss of muscle power.
+             - Actions: turning off heater, open the fresh air vents, using supplemental oxygen.
+         - Propellers
+           - Fixed-Pitch
+             - Low blade angle - climb propeller - best performance for takeoff and climb
+             - High bland angle - cruise propeller - best for high-speed cruise and high-altitude flight
+             - Have one control: throttle, and one indicator: tachometer
+           - Constant-Speed propeller
+             - More efficient
+             - AKA: variable-pitch, controllable-pitch
+             - Throttle controls engine power output - indicated by manifold pressure gauge
+             - Propeller controls engine RPM, selects blade angle
+             - For a given RPM setting, there is a maximum allowable manifold pressure. In general, avoid high manifold pressure with low RPM settings
+         - Propeller Hazards
+         - Electrical systems
+           - Alternator - Typically 14 or 28 volts.
+             - Produce AC current, a rectifier converts to DC.
+             - Should turn off most equipment during engine start to protect against voltage surges from the starter
+           - Battery - mainly to start engine, also backup in case alternator fails
+           - Ammeter - Monitors electrical current in amperes
+             - Ammeter measures flow into or out of the battery. Positive is charging. Negative is discharging. Discharge indicates electrical load exceeds the output of the alternator. This requires reducing electrical load and landing as soon as possible. 
+             - Loadmeter - load placed on the alternator. Does not indicate battery charge. Will indicate zero if alternator is malfunctioning.
+           - Master Switch
+             - Controls entire electrical system except the ignition system
+             - Engine starter will not operate without master switch since it's power by electrical system, not magnetos
+             - Split. Bat - Battery only. Alt - Alternator. Can turn off alternator if it malfunctions or when testing.
+           - Circuit Breakers and Fuses
+             - Resetting will usually re-activate the circuit. Will continue to pop if there is an overload or short.
+             - Extra fuses required for night flight (if plane has fuses)
+           - Backup Electrical Systems
+             - Very important for "glass cockpits"
+             - Dual alternators - might be smaller and connected to an essential bus for only IFR required equipment.
+             - Standby Battery - Charged by main bus, if voltage drops below 20V, disconnects from main bus and power the essential bus.
+             - Essential bus powers the primary flight instruments, the Number 1 Nav/Com radio, standby indicator lights - for 30 minutes.
+           - FADEC Backup Power
+             - Full authority digital engine control (FADEC). Loss of power would mean the computerized engine control units (ECUs) would stop working and the engine stops. 
+**** Section 3 - flight Instruments
+***** Pitot-Static
+      - Use air pressure differences to measure speed and altitude
+      - Airspeed indicator, altimeter, vertical speed indicator
+      - Airspeed also uses pitot pressure. Others only use static.
+      - ! Instruments required for day VFR flight in a single-engine airplane are: airspeed indicator, altimeter, magnetic compass, tachometer, oil pressure gauge, oil temperature gauge, manifold pressure gauge (for constant-speed propeller), fuel gauge for each tank, landing gear position indicator (for retractable landing gear)
+      - Air pressure - 14.7 pounds per square inch (lb/in^2) at sea level. At 18,000 feet, atmospheric pressure is approximately one-half sea-level pressure.
+      - Lower temperature = lower atmospheric pressure (lowers movement of molecules, exerting less pressure).
+      - Warmer temperature - high atmospheric pressure
+      - International Standard Atmosphere (ISA) - sea level, 14.7 lb/in^2, 15'C (59'F). This is 29.92 inches of mercury (Hg). 1013.2 millibars.
+      - Standard pressure lapse rate for each 1,000 feet of altitude is approx. 1.00 inches Hg, temperature lapse rate is 2'C (3.5'F)
+      - ! Pitot tube - provides pitot pressure, or impact/ram pressure.
+      - Static port - normally flush on side of fuselage
+****** Airspeed Indicator
+      - Only instrument to use both pitot and static pressure
+      - V_S0 :: lower limit of white arc - Power-off stall speed at max landing weight in landing configuration
+      - V_S1 :: lower limit of green arc - power-off stall speed at max takeoff weight in clean configuration
+      - White Arc :: Flap operating zone - lower limit is full flap stall speed, upper limit max flap speed
+      - V_FE :: upper limit of white arc - max speed flaps extended
+      - Green Arc :: normal operating range
+      - V_NO :: upper limit of green arc - max structural cruising speed. Only exceed in smooth air.
+      - Yellow Arc :: Caution range - only within smooth air and then only with caution.
+      - V_NE (Red Line) :: Never-Exceed speed.
+      - Other V speeds not shown:
+        - V_A :: maneuvering speed - max speed at which you may apply full and abrupt control movement without the possibility of causing structural damage. Max speed under turbulence. Changes with weight which is why it is not listed on airspeed indicator. higher with higher weight.
+        - V_LE :: Not exceed when gear is extended (for retractable gear planes)
+        - V_LO :: Max speed to raise/lower landing gear (for retractable gear planes)
+      - Types of Airspeed
+        - Indicated airspeed :: directly from airspeed indicator. Stall speed does not change with altitude. 
+        - Calibrated Airspeed :: IAS corrected for installation and instrument errors.
+        - True Airspeed :: CAS corrected for altitude and non-standard temperature. For a given IAS, TAS increases with altitude. 
+                           (As altitude or air temperature increases, density decreases)
+        - Groundspeed (GS) :: Speed of plane over the ground. TAS adjusted for wind. Decreases with headwind, increases with tailwind.
+****** Altimeter
+      - Long pointer :: hundreds of feet
+      - Medium pointer :: thousands of feet
+      - Short pointer :: tens of thousands of feet
+      - Must set barometric pressure at sea level. Increases about 10 feet for each .01 inch Hg.
+      - Types of Altitude:
+        - Indicated altitude :: altitude measured by altimeter
+        - Pressure altitude :: IA when set to 29.92. Distance above theoretical plane where atmospheric pressure is equal to 29.92 (standard datum plane).
+        - Density altitude :: Pressure altitude corrected for nonstandard temperature. Increases as ambient temperature increases. Altitude at which the aircraft acts like it is performing.
+        - Calibrated altitude :: Indicated altitude corrected to compensate for instrument error.
+        - True altitude :: actual height above Mean Sea Level (MSL)
+        - Absolute altitude :: Height above ground level (AGL)
+      - Altimeter Errors:
+        - If you fly from area of high pressure to an area of lower pressure, without resetting altimeter, altimeter will indicate higher than true.
+        - If you fly from an area of low pressure to an area of higher pressure, without resetting altimeter, altimeter will indicate lower than true.
+        - "When flying from high to low, look out below."
+        - When temperature is warmer than standard, indicated altitude will be lower than true.
+        - When temperature is colder than standard, indicated altitude will be higher than true.
+        - Use caution with extremely low pressure (below 28.00 in Hg) or unusually high pressure (above 31.00 in Hg.) - can affect altimeter accuracy.
+****** Vertical Speed Indicator
+       - (VSI) or Vertical Velocity Indicator (VVI)
+       - Trend information :: immediate indication of an increase or decrease in rate of climb/descent
+       - Rate information :: stabilized rate of change
+****** Blocked Pitot system
+       - moisture, ice, dirt, insects
+       - If pitot tube is blocked, but drain hole is open - airspeed will read zero
+       - If pitot tube, drain hole and static system all become clogged, changes in airspeed will not be indicated due to trapped pressures.
+       - If static system remains clear, airspeed indication will increase with climb and decrease with descent. (backwards than normal, will act like an altimeter)
+****** Blocked Static system
+       - Airspeed will continue to operate but is inaccurate - above blocked altitude level, slower than actual. Below blocked altitude, faster than actual. 
+       - Altimeter will freeze at altitude
+       - VSI - zero indication
+***** Gyroscopic Instruments
+      - Rigidity in space :: a wheel spun rapidly will remain in a fixed position in the plane on which it is spinning.
+      - Precession :: tilting or turning of a gyro in response to pressure
+      - Attitude and heading usually powered by vacuume system system. Turn coordinator typically electric.
+      -  
