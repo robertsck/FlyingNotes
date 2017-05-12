@@ -2,7 +2,6 @@
 #+SETUPFILE: setup/theme-bigblow-local.setup
 
 * Scenario Based Training
-
 ** Configurations
 
 *** Initial Climb after Takeoff
@@ -76,7 +75,6 @@
    - Trim - Trim to relieve pressure
 
 * Private Pilot - Ground
-
 ** Part I - Fundamentals of Flight
 *** Chapter 1 - Discovering Aviation
 **** Pilot Training 
@@ -453,4 +451,199 @@
       - Rigidity in space :: a wheel spun rapidly will remain in a fixed position in the plane on which it is spinning.
       - Precession :: tilting or turning of a gyro in response to pressure
       - Attitude and heading usually powered by vacuume system system. Turn coordinator typically electric.
-      -  
+****** Turn Coordinator 
+       - Roll and Yaw
+       - standard turn rate :: 3 degrees per second, 360' in two minutes. Only shows rate of turn, not a specific angle of bank.
+       - Slip :: rate of turn is too low for the angle of bank, ball moves to inside of the turn. Decrease bank or apply rudder in direction of turn. 
+       - Skid :: rate of turn is too great for the angle of bank, ball moves to outside of the turn. Increase bank or reduce rudder in direction of turn. 
+       - "Step on the ball"
+****** Attitude Indicator
+       - Pitch and Roll
+       - Bank scale - 10', 20', 30', 60'
+****** Heading indicator
+       - must set against magnetic compass every 15 minutes during straight, level, unaccelerated flight.
+       - Can tumble during excessive pitch and roll conditions
+****** Magnetic Compass
+       - variation :: angular difference between the true and magnetic poles at a given point
+       - subtract easterly variation and add westerly variation to get magnetic direction
+       - Deviation :: a compass error due to magnetic disturbances within the plane. Marked on a correction card.
+       - Magnetic Dip :: compass pulled towards north and downward. Greatest near the pole. Within 300 miles use for navigation impractical.
+       - Acceleration Errors :: In northern hemisphere: accelerate - turns to north. Decelerate - turns to south. Most pronounced on east/west headings. Doesn't occur on north/south headings. ANDS (accelerate north, decelerate south)
+       - Turning error :: Most pronounced when turning to/from headings of north/south. In northern hemisphere, from a heading of north, will indicate a turn in the opposite direction, and then lag actual heading. Lag disappears on a east/west heading. Opposite when turning from east/west to north. From a heading of south, indicates in proper direction but leads the actual heading. Opposite when turning from east/west heading. Lead or lag is approx. equal to latitude. Opposite in southern hemisphere.
+       - Only accurate during smooth air, in straight and level and unaccelerated flight.
+****** Integrated flight displays
+       - Primary Flight Display (PFD)
+         - Attitude and heading reference system (AHRS) :: provides attitude, heading, rate of turn and slip/skid information
+         - Magnetometer :: uses a flux valve or flux gate, electronic compass, doesn't have errors of a traditional magnetic compass. Do not have to set the heading to match the compass.
+         - Mems Gyros :: used by AHRS. Technically not gyroscopes but angular rate sensors. Use Coriolis effect.
+         - Ring laser gyros :: another type of AHRS gyro.
+         - Horizontal Situation Indicator :: course deviation indicator (CDI) change color based on navigation source: magenta for GPS, green for VOR. 
+         - Errors - red X means indications are unreliable.
+         - AHRS Instrument check - during taxi verify: heading indicator agrees with compass, heading indicator and turn indicator show turns in the correct direction, slip/skid indicator moves to the outside of the turn. Check and set backup instruments.
+         - Air Data Computer :: use reading from pitot tube, static source and outside air temperature probe to display airspeed indicator, altimeter, and vertical speed indicator. Shows true airspeed and outside air temperate.
+         - ADC instrument check - verify airspeed indicator reads zero at rest, indicates airspeed appropriately during takeoff roll, altimeter with 75 feet of a known elevation. VSI reads zero. Check and set backup instruments. 
+
+*** Chapter 3 - Aerodynamic Principles
+**** Section A - Four Forces of Flight
+     - In unaccelerated flight, the four forces are in equilibrium.
+     - Newton's first law :: body at rest tends to stay at rest, body in motion tends to stay in motion
+     - Newton's second law :: F=ma
+     - Newton's third law :: every force is opposed by an equal and opposite force
+     - Bernoulli's Principle :: as the velocity of a fluid increases, it's pressure decreases
+     - Angle of Attack :: angle formed by the wing chord line and relative wind
+     - Coefficient of Lift (C_L) :: based on an given airfoil design. Increases with AoA until C_L_max
+     - Aspect Ratio :: span of the wing divided by its average chord. The higher the aspect ratio, the higher the lifting efficiency of the wing.
+     - Planform:
+       - elliptical - ideal for slow speeds, unfavorable stall characteristics
+       - rectangular - not as efficient as elliptical, but stalls first at wing root
+       - Tapered - better lift/drag ratio, can stall first at wing tip. Also combination of rectangular and tapered.
+       - Sweptback - efficient at high speeds
+     - Angle of incidence :: angle at which wing is attached to fuselage
+     - Wing twist :: wingtip has lower angle of incidence than the wing root. Ensures root of wing stalls first.
+     - Pilot control of lift:
+       - Change angle of attack
+       - Changing airspeed - lift is proportional to the square of the airplane's speed
+       - Angle of attack and airspeed -
+     - Flaps - allow steeper angle of descent without increasing airspeed. Increases lift and drag.
+       - Plain flap - attached by a hinge
+       - Split flap - only hinged at lower portion. Causes greater drag.
+       - Slotted Flap - allows portion of lower air to travel through a slot, increasing lift
+       - Fowler flap - moves back and down, increases total wing area, as well as camber and chord line 
+     - Drag
+       - Parasite drag - Proportional to speed
+         - Form drag :: turbulent wake
+         - Interference drag :: when airflow around one part of plane interacts with airflow around another part. Eg. where wing joins the fuselage.
+         - Skin friction drag :: by roughness of plane's surface
+       - Induced drag :: Wingtip vortices. Portion of lift inclined aft due to inclined relative wind. Inversely proportional to speed. 
+       - L/D_max :: where lift to drag ratio is the greatest. Total lift capacity of the plane is most favorable.
+     - Ground Effect :: reduction in induced drag. Can cause plane to lift off early. More noticeable in low wing aircraft. 
+**** Section B - Stability
+     - An inherently stable plane will require less effort to control
+     - Stability :: characteristic that causes a plane to return to a condition of equilibrium after it is disturbed.
+     - Positive static stability :: initial tendency to return to position from which it was displaced.
+     - Positive dynamic stability :: returns over a period of successive smaller oscillations.
+     - Maneuverability :: permits to be easily maneuvered, can withstand stress of maneuvers
+     - Controllability :: capability to respond to control inputs.
+     - 3 Axes: Always through CG
+       - Longitudinal :: from nose to tail - roll
+       - Lateral :: Along wing - pitch
+       - Vertical :: yaw
+     - Longitudinal Stability
+       - Involves the pitching motion, or moving about its lateral axis
+       - Center of Pressure :: point on chord line where lift is considered concentrated (center of lift)
+         - Forward at high angles of attack, aft as angle of attack decreases. Will tend to pitch down as AoA is increased
+         - Typically designed to remain aft of CG.
+       - Center of Gravity
+         - Must be within the approved range
+         - CG too far forward :: longer takeoff distance, higher stalling speeds
+         - CG too far aft :: less stable at all speeds, ineffective for spin recovery, may be impossible to lower the nose.
+       - Horizontal Stabilizer :: offsets nose heavy tendency of plane
+         - Subject to effects of wing and prop downwash (except T-tail designs)
+         - Canard Design :: stabilizer in front, produce positive lift, good stall characteristics
+         - Power effects - 
+           - Increase power - nose up
+           - Decrease power - nose down
+           - Thrustline :: typically parallel to longitudinal axis and above the CG. Above CG counteracts downwash.
+           - High power, low airspeed increased downwash and decreased airspeed reduce overall stabilizing effect of stabilizer. Increasing thrust increases pitching moment and increases nose heaviness, low airspeed means low counter force produced by stabilizer. Flaps can increase downwash, and further deteriorate longitudinal stability.
+             - Maintain control during power-on approaches or go-arounds as longitudinal stability may be reduced
+     - Lateral Stability
+       - Stability around longitudinal axis - roll
+       - Dihedral :: upward angle of the plane's wings with respect to the horizontal.
+         - When a gust make a plane roll, it will side slip, increasing AoA on low wing, pushing wing back up
+         - Fuselage also helps roll plane during a sideslip (in high wing plane). Low-wing will also contribute to a roll due to downwash. Thus, low wing planes need more Dihedral (typically 5 degrees more)
+         - At higher power settings and low airspeeds, propwash reduces effect of dihedral, reducing lateral stability.
+       - Sweepback :: wings angled back
+         - keeps CoL aft of CG, reduce wave drag. Improves lateral stability. Also helps with directional stability.
+       - Keel effect :: steadying influence exerted by side area of fuselage and vertical stabilizer.
+     - Directional Stability
+       - about vertical axis - yaw
+       - Primarily tail
+     - Interaction of lateral and directional stability
+       - Dutch roll :: creates a side to side wagging of the tail. Caused by dihedral being more powerful than directional stability. Designers tend to minimize dutch roll as spiral instability is more easily corrected. 
+       - Spiral instability :: Strong directional stability compared with lateral stability. Tendency to roll and pitch down. 
+***** Stalls
+      - Stall speed changes
+        - flaps decrease stall speed
+        - weight increases stall speed
+        - forward CG increases stall speed
+        - Snow, ice, frost can increase stall speed
+        - Turbulence
+      - Three types:
+        - Power-off stalls :: simulate a normal landing approach
+        - Power-on stalls :: normally during takeoff, climb-out and go-arounds
+        - Cross-control stall :: most common when trying to correct for overshooting a runway
+      - Stall recognition
+        - mushy control feeling
+        - Buffeting
+      - Recovery:
+        1. Decrease angle of attack
+        2. Smoothly apply maximum allowable power
+        3. Adjust the power as required
+      - Spins
+        - Single engine, normal category planes prohibited from intentional spins
+        - usually occurs from exceeding CAoA while uncoordinated
+        - Spin usually results in rotation in direction of the rudder being applied
+        - Types:
+          - Erect spin :: slightly nose down rolling and yawning motion in the same direction
+          - Inverted spin :: Upside down, roll and yaw occurring in opposite directions
+          - Flat spin :: approx. level pitch, yaws about vertical axis. Most GA planes are designed to prevent entry into a flat spin.
+      - Factors for prevent stall accidents:
+        - Pay attention to loading
+        - Do not take off with snow, ice or frost on the wings
+        - Don't attempt to turn back to runway after takeoff.
+        - Maintain coordinated flight
+        - In gusty winds, use higher than normal airspeed
+        - Concentrate on flying, avoid prolonged distractions
+      - Spin phases
+        - Incipient spin :: from stall and rotation start to fully developed, approx. first two turns.
+        - Fully developed spin :: somewhere in the second turn, steady state
+        - Spin recovery (general for erect spins)
+          - Throttle to idle
+          - Neutralize ailerons
+          - Determine direction of rotation
+          - Apply full opposite rudder
+          - Briskly apply elevator forward to approximately the neutral position
+          - As rotation stops, neutralize rudder
+          - Gradually apply aft elevator to return to level flight
+        - 
+**** Section C - Aerodynamics of Maneuvering Flight
+***** Climbing Flight
+      - A component of weight opposes thrust, requiring more thrust
+      - Left turning tendencies during high-power low-airspeed
+        - Torque :: propeller rotates clockwise from pilot's point of view, causes counterclockwise torque rotation on plane
+        - Gyroscopic precession :: force applied 90' in direction of rotation. Left turning tendency when tail of conventional gear plane raises off ground during takeoff.
+        - Asymmetrical Thrust :: P-factor, at high angles of attack, descending blade has higher angle of attack that ascending blade, causes plane to yaw to the left.
+        - Spiraling Slipstream :: airflow caused by prop hits vertical stabilizer, yawing plane to the left
+        - Corrections :: trim tab, engine canted slightly right
+***** Descending Flight
+      - L/D_Max results in best gliding distance, corresponds to best glide speed, best glide ratio
+      - Glide angles increases with drag,
+      - Factors affecting glide:
+        - Weight - heavier plane will need greater speed, will sink faster, but same glide distance
+        - Configuration - increasing drag decreases the glide distance, must lower nose to maintain speed
+        - Headwind - increase glide speed slightly - normally half of headwind component
+        - Tailwind - decrease glide speed slightly - smaller than headwind reduction - avoid increasing sink rate
+***** Turning Flight
+      - Bank splits lift into two components
+      - Horizontal component creates centripetal force, inertia creates the effect of centrifugal force
+      - To maintain altitude during turn, lift must be increased to balance weight of the plane
+      - Adverse Yaw :: tendency to yaw towards the outside of the turn, caused by increased drag on outside wing
+        - requires use of rudder into the turn. 
+      - Overbanking tendency - cause by outside wing traveling faster, greater lift, wants to overbank, must use slight opposite aileron
+      - Rate of turn - time per degrees. Increased airspeed decreases rate of turn, increased bank increases rate of turn
+      - Radius of turn - Increased airspeed increases radius, angle of bank increases radius of turn decreases
+***** Load Factor 
+      - Increase with angle of bank
+      - 60' bank requires 2G load factor
+      - Stall speed increases with angle of bank - increases at square root of the load factor 
+        - 60' bank stall speed increases by 41%
+        - 75' bank stall speed increases by 100%
+      - Accelerated stall :: stall created due to increased G-forces
+      - Normal GA aircraft has a 3.8 positive G and 1.52 negative G limit. Utility: +4.4G, -1.76G, Acrobatic: +6G, -3G
+      - V_A - Maneuvering speed - max speed at which you can use full, abrupt control movement without over-stressing the frame. Decreases as weight decreases because an aircraft at lighter weights is subject to more rapid acceleration from gusts and turbulence. 
+** Part II - Flight Operations
+*** Chapter 4 - The Flight Environment
+**** Section A - Safety of Flight
+**** Section B - Airports
+**** Section C - Aeronautical Charts
+**** Section D - Airspace
